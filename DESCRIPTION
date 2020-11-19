@@ -1,0 +1,18 @@
+Package: bcr
+Title: Extract Moroccan Financial Data
+Version: 0.1.0
+Authors@R: 
+    person(given = "Abdessabour",
+           family = "Moutik",
+           role = c("aut", "cre"),
+           email = "a.moutik@insea.ac.ma")
+Description: An R package that scraps LeBoursier's website 
+    for Moroccan stock prices, bonds and Market Indices.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports: 
+  httr, jsonlite
+Depends: R (>= 3.1.0)
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
