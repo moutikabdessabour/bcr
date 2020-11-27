@@ -11,6 +11,5 @@ Returns a data.frame containing all the bonds listed in \href{http://leboursier.
 The column names are self explanatory except for \code{full_name} which stands for the full name of the bond issuer.
 }
 \examples{
-\dontrun{
-  bonds()}
+  bonds()
 }

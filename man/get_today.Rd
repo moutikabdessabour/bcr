@@ -10,6 +10,5 @@ get_today()
 Returns a data.frame containing the daily variation for all the stocks
 }
 \examples{
-\dontrun{
-  get_today()}
+  get_today()
 }

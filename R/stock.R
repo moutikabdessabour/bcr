@@ -1,5 +1,7 @@
 
-#' Scraps the historical stock prices for the provided companies
+#' Stock prices
+#' @details 
+#' Scraps the historical stock prices for the provided companies.
 #'
 #' @description 
 #' Scraps [**Le Boursier**](http://leboursier.ma/)'s API and get the historical prices for the specified companies.
@@ -12,10 +14,10 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
 #'   stock("Wafa Assur")
 #'   stock() # same as runing stock("MASI")
-#'   stock("MADEX")}
+#'   stock("MASI")
+#'   stock("MADEX")
 #' @rdname stock
 stock <- function(x) {
     #if(length(x)>1) do.call(stocks, as.list(x))
@@ -29,9 +31,8 @@ stock <- function(x) {
 #'
 #' @rdname stock
 #' @examples
-#' \dontrun{
 #'   stocks("Wafa Assur", "Nexans Maroc")
-#'   stocks("Masi", "MADEX")}
+#'   stocks("Masi", "MADEX")
 stocks <- function(...){
   vals <- list_of_codes[tolower(list_of_codes$name) %in% tolower(c(...)), ]
   stopifnot(nrow(vals))

@@ -3,7 +3,7 @@
 \name{intraday}
 \alias{intraday}
 \alias{intradays}
-\title{Scraps the intraday stock prices for the provided companies}
+\title{Intraday Prices}
 \usage{
 intraday(name)
 
@@ -13,12 +13,15 @@ intradays(...)
 \item{name, ...}{Company names as returned by the \code{\link[=get_today]{get_today()}} function}
 }
 \description{
+Intraday Prices
+}
+\details{
+Scraps the intraday stock prices for the provided companies
+
 Returns a data.frame containing all the intraday prices for the specified stocks.
 Where the \code{symbol} column contains the name of the company.
 }
 \examples{
-\dontrun{
-  intraday("Wafa Assur")}
-\dontrun{
-  intradays("Wafa Assur", "Nexans Maroc")}
+  intraday("Wafa Assur")
+  intradays("Wafa Assur", "Nexans Maroc")
 }

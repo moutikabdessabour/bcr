@@ -4,14 +4,14 @@
 #'
 #' @rdname intraday
 #' @examples
-#' \dontrun{
-#'   intraday("Wafa Assur")}
+#'   intraday("Wafa Assur")
 intraday <- function(name){
     if(missing(name)) name<-NULL
     get_intra(list_of_codes[tolower(list_of_codes$name) %in% tolower(name[[1]]), 2, drop=T])
 }
 
-#' Scraps the intraday stock prices for the provided companies
+#' Intraday Prices
+#' @details Scraps the intraday stock prices for the provided companies
 #'
 #' Returns a data.frame containing all the intraday prices for the specified stocks.
 #' Where the `symbol` column contains the name of the company.
@@ -22,8 +22,7 @@ intraday <- function(name){
 #' @rdname intraday
 #' @export
 #' @examples
-#' \dontrun{
-#'   intradays("Wafa Assur", "Nexans Maroc")}
+#'   intradays("Wafa Assur", "Nexans Maroc")
 intradays <- function(...){
     vals <- list_of_codes[tolower(list_of_codes$name) %in% tolower(c(...)), ]
     stopifnot(nrow(vals)>0)

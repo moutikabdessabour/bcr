@@ -3,7 +3,7 @@
 \name{stock}
 \alias{stock}
 \alias{stocks}
-\title{Scraps the historical stock prices for the provided companies}
+\title{Stock prices}
 \usage{
 stock(x)
 
@@ -18,12 +18,14 @@ Scraps \href{http://leboursier.ma/}{\strong{Le Boursier}}'s API and get the hist
 Returns a data.frame containing all the historical data for the specified stock.
 If the plural variant is used it'll add a \code{symbol} column that'll contain the name of the company.
 }
+\details{
+Scraps the historical  stock prices for the provided companies.
+}
 \examples{
-\dontrun{
   stock("Wafa Assur")
   stock() # same as runing stock("MASI")
-  stock("MADEX")}
-\dontrun{
+  stock("MASI")
+  stock("MADEX")
   stocks("Wafa Assur", "Nexans Maroc")
-  stocks("Masi", "MADEX")}
+  stocks("Masi", "MADEX")
 }

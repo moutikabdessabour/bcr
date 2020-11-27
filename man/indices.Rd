@@ -3,21 +3,16 @@
 \name{indices}
 \alias{indices}
 \alias{sector_indices}
-\title{Gets the Moroccan Market and Sector indices}
+\title{Moroccan Market and Sector indices}
 \usage{
 indices()
 
 sector_indices()
 }
 \description{
-\code{indices} (resp. \code{sector_indices}) Returns a data.frame containing all the Market Indices (resp. Sector Indices) listed in \href{http://leboursier.ma/details/marche.html}{\strong{Le Boursier}}.
-}
-\details{
-The column names are self explanatory.
+Gets the Moroccan Market and Sector indices that are listed in \href{http://leboursier.ma/details/marche.html}{\strong{Le Boursier}}.
 }
 \examples{
-\dontrun{
-  indices()}
-\dontrun{
-  sector_indices()}
+  indices()
+  sector_indices()
 }

@@ -11,12 +11,9 @@ There were no ERRORs or WARNINGs.
 There was 1 NOTE on win-builder and rhub:
 
 * checking CRAN incoming feasibility ... NOTE
-  Maintainer: 'Abdessabour Moutik <a.moutik@insea.ac.ma>'
-  
   New submission
   Possibly mis-spelled words in DESCRIPTION:
-    Indices (10:49)
     LeBoursier's (9:39)
 
-  Indices is the plural of index, and LeBoursier is in French.
+  LeBoursier is in French.
 
