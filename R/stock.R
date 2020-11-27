@@ -34,8 +34,8 @@ stock <- function(x) {
 #'   stocks("Wafa Assur", "Nexans Maroc")
 #'   stocks("Masi", "MADEX")
 stocks <- function(...){
-  vals <- list_of_codes[tolower(list_of_codes$name) %in% tolower(c(...)), ]
-  stopifnot(nrow(vals))
+  print(vals <- list_of_codes[tolower(list_of_codes$name) %in% tolower(c(...)), ])
+  stopifnot(nrow(vals)>0)
 
   df <- lapply(vals[[2]], get_st)
   sapply(df, nrow) -> each
