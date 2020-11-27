@@ -17,8 +17,8 @@ downloads](https://cranlogs.r-pkg.org/badges/last-month/bcr?color=grey)](https:/
 <!-- badges: end -->
 
 *bcr* is an `R` package that scraps the web (mainly [**Le
-Boursier**](leboursier.ma)) for Moroccan Financial Data. It aims to
-facilitate the access of this data on `R`.
+Boursier**](https://leboursier.ma)) for Moroccan Financial Data. It aims
+to facilitate the access of this data on `R`.
 
 Data provided by *bcr*:
 
@@ -50,4 +50,4 @@ remotes::install_github("moutikabdessabour/bcr")
 ## Documentation
 
 A minimal documentation is provided
-[here](moutikabdessabour.github.io/bcr/reference/index.html).
+[here](https://moutikabdessabour.github.io/bcr/reference/index.html).
