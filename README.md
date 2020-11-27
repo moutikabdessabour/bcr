@@ -7,7 +7,7 @@
 
 [![CRAN
 status](https://www.r-pkg.org/badges/version/bcr)](https://cran.r-project.org/package=bcr)
-[![](https://img.shields.io/badge/dev%20-0.1.0-green.svg)](https://github.com/moutikabdessabour/bcr)
+[![](https://img.shields.io/badge/dev%20-0.1.1-green.svg)](https://github.com/moutikabdessabour/bcr)
 [![CRAN
 checks](https://cranchecks.info/badges/worst/bcr)](https://cran.r-project.org/web/checks/check_results_bcr.html)
 [![Lifecycle:
@@ -38,7 +38,8 @@ Either install directly from CRAN :
 install.packages("collapse")
 ```
 
-Or from github :
+Or to get the development version first install the `{remotes}` package
+then use the line below:
 
 ``` r
 # install remotes first if you don't have it installed
