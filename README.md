@@ -13,7 +13,7 @@ checks](https://cranchecks.info/badges/worst/bcr)](https://cran.r-project.org/we
 [![Lifecycle:
 maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 [![CRAN RStudio mirror
-downloads](https://cranlogs.r-pkg.org/badges/last-month/bcr?color=grey)](https://markfairbanks.github.io/tidytable/)
+downloads](https://cranlogs.r-pkg.org/badges/last-month/bcr?color=grey)](https://moutikabdessabour.github.io/bcr/)
 <!-- badges: end -->
 
 *bcr* is an `R` package that scraps the web (mainly [**Le
