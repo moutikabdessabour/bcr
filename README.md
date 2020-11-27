@@ -6,7 +6,7 @@
 <!-- badges: start -->
 
 [![CRAN
-status](https://www.r-pkg.org/badges/version/tidytable)](https://cran.r-project.org/package=bcr)
+status](https://www.r-pkg.org/badges/version/bcr)](https://cran.r-project.org/package=bcr)
 [![](https://img.shields.io/badge/dev%20-0.1.0-green.svg)](https://github.com/moutikabdessabour/bcr)
 [![CRAN
 checks](https://cranchecks.info/badges/worst/bcr)](https://cran.r-project.org/web/checks/check_results_bcr.html)
@@ -50,15 +50,12 @@ remotes::install_github("moutikabdessabour/bcr")
 ## Documentation
 
 A minimal documentation is provided
-[here](moutikabdessabour.github.io/bcr/reference/index.html).
-
+[here](moutikabdessabour.github.io/bcr/reference/index.html). <!--
 ## Examples
 
 <details>
-
-<summary><b><a style="cursor: pointer;">Click here to expand </a></b>
-</summary>
-
+  <summary><b><a style="cursor: pointer;">Click here to expand </a></b> </summary>
+  
 ``` r
 library(collapse)
 data("iris")            # iris dataset in base R
@@ -240,10 +237,9 @@ qsu(iris, ~ Species, w = ~ w, higher = TRUE)  # Grouped summary + higher moments
 qsu(pdata, higher = TRUE)                     # Panel-data summary (between and within entities)
 pwcor(num_vars(irisNA), N = TRUE, P = TRUE)   # Pairwise correlations with p-value and observations
 pwcor(W(pdata, keep.ids = FALSE), P = TRUE)   # Within-correlations
+
 ```
 
 </details>
-
-<p>
-
-</p>
+<p> </p>
+-->

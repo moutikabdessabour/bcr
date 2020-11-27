@@ -17,7 +17,7 @@ knitr::opts_chunk$set(
 # bcr
 
 <!-- badges: start -->
-[![CRAN status](https://www.r-pkg.org/badges/version/tidytable)](https://cran.r-project.org/package=bcr)
+[![CRAN status](https://www.r-pkg.org/badges/version/bcr)](https://cran.r-project.org/package=bcr)
 [![](https://img.shields.io/badge/dev%20-0.1.0-green.svg)](https://github.com/moutikabdessabour/bcr)
 [![CRAN checks](https://cranchecks.info/badges/worst/bcr)](https://cran.r-project.org/web/checks/check_results_bcr.html)
 [![Lifecycle: maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
@@ -50,7 +50,7 @@ remotes::install_github("moutikabdessabour/bcr")
 ```
 ## Documentation
 A minimal documentation is provided [here](moutikabdessabour.github.io/bcr/reference/index.html).
-
+<!--
 ## Examples
 
 <details>
@@ -242,4 +242,4 @@ pwcor(W(pdata, keep.ids = FALSE), P = TRUE)   # Within-correlations
 
 </details>
 <p> </p>
-
+-->
