@@ -27,6 +27,7 @@ knitr::opts_chunk$set(
 *bcr* is an `R` package that scraps the web (mainly [**Le Boursier**](leboursier.ma)) for Moroccan Financial Data. It aims to facilitate the access of this data on `R`.
 
 Data provided by *bcr*:
+
 *  Listing of **Moroccan Bonds**
 *  Latest *price variation* of Moroccan stocks (Including MASI and MADEX indices)
 *  Listing of **Moroccan Market and Sectorial Indices**

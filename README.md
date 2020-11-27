@@ -20,10 +20,14 @@ downloads](https://cranlogs.r-pkg.org/badges/last-month/bcr?color=grey)](https:/
 Boursier**](leboursier.ma)) for Moroccan Financial Data. It aims to
 facilitate the access of this data on `R`.
 
-Data provided by *bcr*: \* Listing of **Moroccan Bonds** \* Latest
-*price variation* of Moroccan stocks (Including MASI and MADEX indices)
-\* Listing of **Moroccan Market and Sectorial Indices** \* Historical
-price data of Moroccan stocks \* Intraday variation of Moroccan stocks
+Data provided by *bcr*:
+
+  - Listing of **Moroccan Bonds**
+  - Latest *price variation* of Moroccan stocks (Including MASI and
+    MADEX indices)
+  - Listing of **Moroccan Market and Sectorial Indices**
+  - Historical price data of Moroccan stocks
+  - Intraday variation of Moroccan stocks
 
 ## Installation
 
