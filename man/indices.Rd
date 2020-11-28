@@ -13,6 +13,6 @@ sector_indices()
 Gets the Moroccan Market and Sector indices that are listed in \href{http://leboursier.ma/details/marche.html}{\strong{Le Boursier}}.
 }
 \examples{
-  indices()
-  sector_indices()
+indices()
+sector_indices()
 }

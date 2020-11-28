@@ -14,10 +14,9 @@
 #' @export
 #'
 #' @examples
-#'   stock("Wafa Assur")
-#'   stock() # same as runing stock("MASI")
-#'   stock("MASI")
-#'   stock("MADEX")
+#' head(stock("Wafa Assur"), 20)
+#' head(stock(), 20) # same as runing stock("MASI")
+#' head(stock("MADEX"), 20)
 #' @rdname stock
 stock <- function(x) {
     #if(length(x)>1) do.call(stocks, as.list(x))
@@ -31,8 +30,7 @@ stock <- function(x) {
 #'
 #' @rdname stock
 #' @examples
-#'   stocks("Wafa Assur", "Nexans Maroc")
-#'   stocks("Masi", "MADEX")
+#' head(stocks("Masi", "MADEX"), 20)
 stocks <- function(...){
   vals <- list_of_codes[tolower(list_of_codes$name) %in% tolower(c(...)), ]
   stopifnot(nrow(vals)>0)

@@ -22,6 +22,6 @@ Returns a data.frame containing all the intraday prices for the specified stocks
 Where the \code{symbol} column contains the name of the company.
 }
 \examples{
-  intraday("Wafa Assur")
-  intradays("Wafa Assur", "Nexans Maroc")
+head(intraday(), 30)
+intradays("Wafa Assur", "Nexans Maroc")
 }

@@ -9,7 +9,7 @@
 #'
 #' @rdname bonds
 #' @examples
-#'   bonds()
+#' bonds()
 bonds <- function() {
     setNames(get_html("http://leboursier.ma/index.php?option=com_api&view=api&method=getBondsInfo&format=json")[-c(5,9)], nm=c("bond_name", "issued", "issuer", "full_name", "rate", "price_ref", "price_last")) -> df
     df$rate <- df$rate/100

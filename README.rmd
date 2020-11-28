@@ -39,7 +39,7 @@ Data provided by *bcr*:
 Either install directly from CRAN :
 ```{r, eval=F}
 # From the R console call
-install.packages("collapse")
+install.packages("bcr")
 ```
 Or to get the development version first install the `{remotes}` package then use the line below:
 ```{r, eval=F}

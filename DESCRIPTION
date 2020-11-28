@@ -9,7 +9,7 @@ Authors@R:
 Description: Get Moroccan Stock Prices (historical data and intraday
      changes), Market and Sector Indices and bonds.
      See <https://www.leboursier.ma/>.
-URL: https://github.com/moutikabdessabour/bcr
+URL: https://github.com/moutikabdessabour/bcr, https://moutikabdessabour.github.io/bcr
 BugReports: https://github.com/moutikabdessabour/bcr/issues
 License: MIT + file LICENSE
 Encoding: UTF-8

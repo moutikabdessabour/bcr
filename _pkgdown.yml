@@ -6,7 +6,43 @@ home:
 template:
   params:
     bootswatch: paper
+    ganalytics: G-S3YP66C5WP
 
+navbar:
+  title: "bcr"
+  left:
+    - icon: fa-home
+      href: index.html
+    - text: "Documentation"
+      href: reference/index.html
+    - text: "Changelog"
+      href: news/index.html
+  right:
+   - icon: fa-linkedin
+     href: https://linkedin.com/in/abdessabour-moutik/
+   - icon: fa-github
+     href: https://github.com/moutikabdessabour/bcr
 development:
   mode: auto
-#    footer: corrr is a part of the <strong>tidymodels</strong> ecosystem, a collection of modeling packages designed with common APIs and a shared philosophy.
+
+reference:
+  - contents:
+    - get_today
+  - title: "Intra-day price variation"
+    desc: "Easy access to the price changes that occured for the provided company stock or Market Indices (**MASI** and **MADEX**)."
+  - contents:
+    - intraday
+  - title: "Historical stock prices"
+    desc: "Provides historical price data for the provided companies or Market Indices (**MASI** and **MADEX**)."
+  - contents:
+    - stock
+  - title: "Moroccan Market Indices"
+    desc: "Easy access to the full list of Moroccan Market and Sectorial Indices."
+  - contents:
+    - indices
+  - title: "Moroccan Bonds"
+    desc: "Comprehensive list of the available Moroccan Bonds."
+  - contents:
+    - bonds
+  - title: "Important Notes:"
+    desc: "* The plural variations of the functions accept multiple arguments.\n* The names of the companies should be provided like they're listed in the [`get_today`](get_today.html) output.\n* for [`stock`](stock.html) and [`intraday`](get_today.html) providing no argument defaults to using **MASI** as one."

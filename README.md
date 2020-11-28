@@ -35,7 +35,7 @@ Either install directly from CRAN :
 
 ``` r
 # From the R console call
-install.packages("collapse")
+install.packages("bcr")
 ```
 
 Or to get the development version first install the `{remotes}` package

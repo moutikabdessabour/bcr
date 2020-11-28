@@ -4,10 +4,10 @@
 #'
 #' @rdname intraday
 #' @examples
-#'   intraday("Wafa Assur")
+#' head(intraday(), 30)
 intraday <- function(name){
     if(missing(name)) name<-NULL
-    get_intra(list_of_codes[tolower(list_of_codes$name) %in% tolower(name[[1]]), 2, drop=T])
+    bcr:::get_intra(list_of_codes[tolower(list_of_codes$name) %in% tolower(name[[1]]), 2, drop=T])
 }
 
 #' Intraday Prices
@@ -22,7 +22,7 @@ intraday <- function(name){
 #' @rdname intraday
 #' @export
 #' @examples
-#'   intradays("Wafa Assur", "Nexans Maroc")
+#' intradays("Wafa Assur", "Nexans Maroc")
 intradays <- function(...){
     vals <- list_of_codes[tolower(list_of_codes$name) %in% tolower(c(...)), ]
     stopifnot(nrow(vals)>0)

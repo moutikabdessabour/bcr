@@ -19,13 +19,11 @@ Returns a data.frame containing all the historical data for the specified stock.
 If the plural variant is used it'll add a \code{symbol} column that'll contain the name of the company.
 }
 \details{
-Scraps the historical  stock prices for the provided companies.
+Scraps the historical stock prices for the provided companies.
 }
 \examples{
-  stock("Wafa Assur")
-  stock() # same as runing stock("MASI")
-  stock("MASI")
-  stock("MADEX")
-  stocks("Wafa Assur", "Nexans Maroc")
-  stocks("Masi", "MADEX")
+head(stock("Wafa Assur"), 20)
+head(stock(), 20) # same as runing stock("MASI")
+head(stock("MADEX"), 20)
+head(stocks("Masi", "MADEX"), 20)
 }
