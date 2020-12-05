@@ -42,7 +42,7 @@
   
 
 <meta property="og:title" content="Moroccan Market and Sector indices — indices" />
-<meta property="og:description" content="Gets the Moroccan Market and Sector indices that are listed in Le Boursier." />
+<meta property="og:description" content="Gets the Moroccan Market indices (indices()) or Sector indices (sector_indices()) that are listed in Le Boursier." />
 
 
 
@@ -135,7 +135,7 @@
     </div>
 
     <div class="ref-description">
-    <p>Gets the Moroccan Market and Sector indices that are listed in <a href='http://leboursier.ma/details/marche.html'><strong>Le Boursier</strong></a>.</p>
+    <p>Gets the Moroccan Market indices (<code>indices()</code>) or Sector indices (<code>sector_indices()</code>) that are listed in <a href='http://leboursier.ma/details/marche.html'><strong>Le Boursier</strong></a>.</p>
     </div>
 
     <pre class="usage"><span class='fu'>indices</span><span class='op'>(</span><span class='op'>)</span>
@@ -143,57 +143,77 @@
 <span class='fu'>sector_indices</span><span class='op'>(</span><span class='op'>)</span></pre>
 
 
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>the <code>indices()</code> function returns a <code>data.frame</code> with the following columns:</p><ul>
+<li><p><code>type</code> : the category of the index.</p></li>
+<li><p><code>name</code> : name of the index.</p></li>
+<li><p><code>last_date</code> : last date the price of the index changed.</p></li>
+<li><p><code>price</code> : the price of the index.</p></li>
+<li><p><code>open</code> : the opening price of the index.</p></li>
+<li><p><code>close</code> : the closing price of the index.</p></li>
+<li><p><code>variation</code> : variation of the price.</p></li>
+<li><p><code>low</code> : lowest price of the index.</p></li>
+<li><p><code>high</code> : highest price of the index</p></li>
+</ul>
+
+<p>the <code>sector_indices()</code> function returns a <code>data.frame</code> with the following columns:</p><ul>
+<li><p><code>name</code> : name of the sector.</p></li>
+<li><p><code>price</code> : latest price of the index.</p></li>
+<li><p><code>variation</code> : variation of the price of the index.</p></li>
+</ul>
+
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'>indices</span><span class='op'>(</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;                   type                name          last_date    price     open    close variation      low     high
-#&gt; 1             ST Index         INDICE MASI 27/11/2020 à 16:00 10888.99 11032.39 11032.39     -1.30 10886.87 11055.77
-#&gt; 2             ST Index        INDICE MADEX 27/11/2020 à 16:00  8864.65  8984.72  8984.72     -1.34  8862.88  9004.30
-#&gt; 3             ST Index   Casablanca ESG 10 27/11/2020 à 16:00   833.83   844.57   844.57     -1.27   833.83   847.70
-#&gt; 4    Rentability Index  IND MASI RENT.BRUT 27/11/2020 à 16:00 30632.99 31036.42 31036.42     -1.30 30627.02 31102.20
-#&gt; 5    Rentability Index IND MASI RENTAB NET 27/11/2020 à 16:00 27255.43 27614.38 27614.38     -1.30 27250.13 27672.91
-#&gt; 6    Rentability Index IND MADEX RENT BRUT 27/11/2020 à 16:00 23627.15 23947.18 23947.18     -1.34 23622.42 23999.35
-#&gt; 7    Rentability Index  IND MADEX RENT NET 27/11/2020 à 16:00 21133.63 21419.89 21419.89     -1.34 21129.40 21466.55
-#&gt; 8       Currency Index     INDICE MASI USD 27/11/2020 à 16:00  9765.57  9887.65  9887.65     -1.23  9763.66  9908.60
-#&gt; 9       Currency Index   INDICE MASI EUROS 27/11/2020 à 16:00 10346.40 10492.44 10492.44     -1.39 10344.39 10514.68
-#&gt; 10      Currency Index    INDICE MADEX USD 27/11/2020 à 16:00  7950.08  8052.45  8052.45     -1.27  7948.49  8069.99
-#&gt; 11      Currency Index   INDICE MADEX EURO 27/11/2020 à 16:00  8422.94  8544.99  8544.99     -1.43  8421.25  8563.60
-#&gt; 12 Moroccan bond index       MOROCCAN BI G 27/11/2020 à 18:42   258.37     0.00   258.54     -0.07     0.00     0.00
-#&gt; 13 Moroccan bond index      MOROCCAN BI CT 27/11/2020 à 18:42   180.55     0.00   180.54      0.01     0.00     0.00
-#&gt; 14 Moroccan bond index      MOROCCAN BI MT 27/11/2020 à 18:42   222.90     0.00   223.16     -0.12     0.00     0.00
-#&gt; 15 Moroccan bond index     MOROCCAN BI MLT 27/11/2020 à 18:42   294.99     0.00   295.37     -0.13     0.00     0.00
-#&gt; 16 Moroccan bond index      MOROCCAN BI LT 27/11/2020 à 18:42   406.05     0.00   405.97      0.02     0.00     0.00
-#&gt; 17            CFG bond              CFG25F 26/11/2020 à 18:42  3498.53     0.00  3498.53      0.00     0.00     0.00
-#&gt; 18            CFG bond Morocco CFG25 Index 26/11/2020 à 18:42 22824.50     0.00 22824.50      0.00     0.00     0.00
-#&gt; 19            CFG bond        CFG BOND MCT 25/09/2020 à 18:42   303.87     0.00   303.87      0.00     0.00     0.00
-#&gt; 20            CFG bond        CFG BOND OCT 25/09/2020 à 18:42   445.11     0.00   445.11      0.00     0.00     0.00
-#&gt; 21            CFG bond        CFG BOND OLT 25/09/2020 à 18:42   792.70     0.00   792.70      0.00     0.00     0.00
-#&gt; 22            CFG bond        CFG BOND OMT 25/09/2020 à 18:42   582.68     0.00   582.68      0.00     0.00     0.00
-#&gt; 23            CFG bond        CFG BOND OBL 25/09/2020 à 18:42   568.54     0.00   568.54      0.00     0.00     0.00</div><div class='input'><span class='fu'>sector_indices</span><span class='op'>(</span><span class='op'>)</span>
+#&gt; 1             ST Index         INDICE MASI 04/12/2020 à 16:00 10977.68 10973.08 10973.08      0.04 10968.19 11011.69
+#&gt; 2             ST Index        INDICE MADEX 04/12/2020 à 16:00  8936.66  8932.89  8932.89      0.04  8928.80  8965.21
+#&gt; 3             ST Index   Casablanca ESG 10 04/12/2020 à 16:00   841.79   841.48   841.48      0.04   840.48   844.51
+#&gt; 4    Rentability Index  IND MASI RENT.BRUT 04/12/2020 à 16:00 30882.49 30869.55 30869.55      0.04 30855.81 30978.18
+#&gt; 5    Rentability Index IND MASI RENTAB NET 04/12/2020 à 16:00 27477.43 27465.92 27465.92      0.04 27453.69 27562.57
+#&gt; 6    Rentability Index IND MADEX RENT BRUT 04/12/2020 à 16:00 23819.07 23809.02 23809.02      0.04 23798.12 23895.17
+#&gt; 7    Rentability Index  IND MADEX RENT NET 04/12/2020 à 16:00 21305.30 21296.31 21296.31      0.04 21286.56 21373.37
+#&gt; 8       Currency Index     INDICE MASI USD 04/12/2020 à 16:00  9971.07  9931.69  9931.69      0.40  9927.27  9984.12
+#&gt; 9       Currency Index   INDICE MASI EUROS 04/12/2020 à 16:00 10349.78 10357.39 10357.39     -0.07 10349.78 10393.84
+#&gt; 10      Currency Index    INDICE MADEX USD 04/12/2020 à 16:00  8117.20  8085.13  8085.13      0.40  8081.42  8128.13
+#&gt; 11      Currency Index   INDICE MADEX EURO 04/12/2020 à 16:00  8425.50  8431.67  8431.67     -0.07  8425.50  8462.18
+#&gt; 12 Moroccan bond index       MOROCCAN BI G 27/11/2020 à 18:46   258.37     0.00   258.37      0.00     0.00     0.00
+#&gt; 13 Moroccan bond index      MOROCCAN BI CT 27/11/2020 à 18:46   180.55     0.00   180.55      0.00     0.00     0.00
+#&gt; 14 Moroccan bond index      MOROCCAN BI MT 27/11/2020 à 18:46   222.90     0.00   222.90      0.00     0.00     0.00
+#&gt; 15 Moroccan bond index     MOROCCAN BI MLT 27/11/2020 à 18:46   294.99     0.00   294.99      0.00     0.00     0.00
+#&gt; 16 Moroccan bond index      MOROCCAN BI LT 27/11/2020 à 18:46   406.05     0.00   406.05      0.00     0.00     0.00
+#&gt; 17            CFG bond              CFG25F 03/12/2020 à 18:46  3476.96     0.00  3476.96      0.00     0.00     0.00
+#&gt; 18            CFG bond Morocco CFG25 Index 03/12/2020 à 18:46 22721.50     0.00 22721.50      0.00     0.00     0.00
+#&gt; 19            CFG bond        CFG BOND MCT 25/09/2020 à 18:46   303.87     0.00   303.87      0.00     0.00     0.00
+#&gt; 20            CFG bond        CFG BOND OCT 25/09/2020 à 18:46   445.11     0.00   445.11      0.00     0.00     0.00
+#&gt; 21            CFG bond        CFG BOND OLT 25/09/2020 à 18:46   792.70     0.00   792.70      0.00     0.00     0.00
+#&gt; 22            CFG bond        CFG BOND OMT 25/09/2020 à 18:46   582.68     0.00   582.68      0.00     0.00     0.00
+#&gt; 23            CFG bond        CFG BOND OBL 25/09/2020 à 18:46   568.54     0.00   568.54      0.00     0.00     0.00</div><div class='input'><span class='fu'>sector_indices</span><span class='op'>(</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;                                                           name    price variation
-#&gt; 1                                   AGROALIMENTAIRE PRODUCTION 31032.63     -0.60
-#&gt; 2                                                   ASSURANCES  4004.41     -2.17
-#&gt; 3                                                      BANQUES 11761.61     -1.42
-#&gt; 4                         BATIMENT &amp; MATERIAUX DE CONSTRUCTION 15690.29     -1.67
-#&gt; 5                                                     BOISSONS 14945.01      0.00
-#&gt; 6                                                       CHIMIE  3735.94      2.22
-#&gt; 7                                                DISTRIBUTEURS 30574.97     -0.58
-#&gt; 8                                                  ELECTRICITE  2100.78     -0.59
-#&gt; 9                      EQUIPEMENTS ELECTRONIQUES &amp; ELECTRIQUES  3711.43      0.00
-#&gt; 10                                    INDUSTRIE PHARMACEUTIQUE  2503.31      0.27
-#&gt; 11                 INGENIERIES &amp; BIENS DEQUIPEMENT INDUSTRIELS    71.63     -0.61
-#&gt; 12                                           LOISIRS ET HOTELS   489.90     -1.37
-#&gt; 13               MATERIELS LOGICIELS ET SERVICES INFORMATIQUES  2267.68     -0.14
-#&gt; 14                                                       MINES 19637.09     -1.34
-#&gt; 15                                                  IMMOBILIER  2506.17     -0.15
-#&gt; 16                                              PETROLE ET GAZ 14664.29     -1.38
-#&gt; 17                                  SERVICES AUX COLLECTIVITES  1460.42     -3.97
-#&gt; 18 SOCIETES DE FINANCEMENT ET AUTRES ACTIVITES     FINANCIERES  7705.04     -1.43
-#&gt; 19                                                  IMMOBILIER  2506.17     -0.15
-#&gt; 20                          SOCIETES DE PORTEFEUILLES-HOLDINGS  4857.20      3.17
-#&gt; 21                                       SYLVICULTURE &amp; PAPIER    20.16     -0.27
-#&gt; 22                                          TELECOMMUNICATIONS  2080.47     -1.22
-#&gt; 23                                                  TRANSPORTS  2442.14     -1.26</div></pre>
+#&gt; 1                                   AGROALIMENTAIRE PRODUCTION 30986.64     -0.09
+#&gt; 2                                                   ASSURANCES  4075.67     -0.34
+#&gt; 3                                                      BANQUES 11867.89      0.24
+#&gt; 4                         BATIMENT &amp; MATERIAUX DE CONSTRUCTION 15768.46      0.10
+#&gt; 5                                                     BOISSONS 14005.27     -1.75
+#&gt; 6                                                       CHIMIE  3692.13     -0.01
+#&gt; 7                                                DISTRIBUTEURS 30654.08      0.86
+#&gt; 8                                                  ELECTRICITE  2091.62     -1.68
+#&gt; 9                      EQUIPEMENTS ELECTRONIQUES &amp; ELECTRIQUES  3714.29      0.00
+#&gt; 10                                    INDUSTRIE PHARMACEUTIQUE  2585.74      0.00
+#&gt; 11                 INGENIERIES &amp; BIENS DEQUIPEMENT INDUSTRIELS    68.00     -1.96
+#&gt; 12                                           LOISIRS ET HOTELS   475.19      0.00
+#&gt; 13               MATERIELS LOGICIELS ET SERVICES INFORMATIQUES  2281.63     -0.22
+#&gt; 14                                                       MINES 20521.70      0.08
+#&gt; 15                                                  IMMOBILIER  2353.22     -1.34
+#&gt; 16                                              PETROLE ET GAZ 14734.69      0.31
+#&gt; 17                                  SERVICES AUX COLLECTIVITES  1520.63      3.68
+#&gt; 18 SOCIETES DE FINANCEMENT ET AUTRES ACTIVITES     FINANCIERES  7675.95      0.00
+#&gt; 19                                                  IMMOBILIER  2353.22     -1.34
+#&gt; 20                          SOCIETES DE PORTEFEUILLES-HOLDINGS  4852.65     -0.03
+#&gt; 21                                       SYLVICULTURE &amp; PAPIER    19.35      0.71
+#&gt; 22                                          TELECOMMUNICATIONS  2113.49      0.00
+#&gt; 23                                                  TRANSPORTS  2356.34     -3.82</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
