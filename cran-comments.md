@@ -6,14 +6,4 @@
 * rhub Fedora Linux, R-devel, clang, gfortran
 
 ## R CMD check results
-There were no ERRORs or WARNINGs. 
-
-There was 1 NOTE on win-builder and rhub:
-
-* checking CRAN incoming feasibility ... NOTE
-  New submission
-  Possibly mis-spelled words in DESCRIPTION:
-    LeBoursier's (9:39)
-
-  LeBoursier is in French.
-
+There were 0 errors ✔ | 0 warnings ✔ | 0 notes ✔.
