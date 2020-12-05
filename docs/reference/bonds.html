@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Scraps the data of the Moroccan Bonds — bonds • bcr</title>
+<title>Moroccan Bonds — bonds • bcr</title>
 
 
 <!-- jquery -->
@@ -41,9 +41,8 @@
   <link href="../extra.css" rel="stylesheet">
   
 
-<meta property="og:title" content="Scraps the data of the Moroccan Bonds — bonds" />
-<meta property="og:description" content="Returns a data.frame containing all the bonds listed in Le Boursier.
-The column names are self explanatory except for full_name which stands for the full name of the bond issuer." />
+<meta property="og:title" content="Moroccan Bonds — bonds" />
+<meta property="og:description" content="Scraps all the bonds listed in Le Boursier." />
 
 
 
@@ -130,51 +129,62 @@ The column names are self explanatory except for full_name which stands for the 
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Scraps the data of the Moroccan Bonds</h1>
+    <h1>Moroccan Bonds</h1>
     <small class="dont-index">Source: <a href='https://github.com/moutikabdessabour/bcr/blob/master/R/bonds.R'><code>R/bonds.R</code></a></small>
     <div class="hidden name"><code>bonds.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Returns a data.frame containing all the bonds listed in <a href='http://leboursier.ma/details/marche.html'><strong>Le Boursier</strong></a>.
-The column names are self explanatory except for <code>full_name</code> which stands for the full name of the bond issuer.</p>
+    <p>Scraps all the bonds listed in <a href='http://leboursier.ma/details/marche.html'><strong>Le Boursier</strong></a>.</p>
     </div>
 
     <pre class="usage"><span class='fu'>bonds</span><span class='op'>(</span><span class='op'>)</span></pre>
 
 
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>Returns a <code>data.frame</code> containing :</p><ul>
+<li><p><code>bond_name</code>: name of the bond.</p></li>
+<li><p><code>issued</code>: number of issued bonds.</p></li>
+<li><p><code>issuer</code>: the company that issued the bond.</p></li>
+<li><p><code>full_name</code>: full name of the bond issuer.</p></li>
+<li><p><code>rate</code>: rate of return.</p></li>
+<li><p><code>price_ref</code>: first price.</p></li>
+<li><p><code>price_last</code>: latest price.</p></li>
+</ul>
+
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'>bonds</span><span class='op'>(</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;              bond_name    issued              issuer                                                   full_name   rate price_ref price_last
-#&gt; 1         5.12 ONCF 25 241200000          ONCF MAROC                  Office National des Chemins de Fer - Maroc 0.0512    103.18     103.28
-#&gt; 2   Ob ONCF 201206 415 400000000          ONCF MAROC                  Office National des Chemins de Fer - Maroc 0.0415    100.59     100.42
-#&gt; 3    5.62 Lydec -A- 25 330200000               Lydec                                                    Lydec SA 0.0562    104.97     105.89
-#&gt; 4         5.38 ONDA 20  73500000                ONDA                               Office National Des Aeroports 0.0538    100.10     105.73
-#&gt; 5          5.02 CDM 21  93100000                 CDM                                          Credit du Maroc SA 0.0502    100.81       0.00
-#&gt; 6         5.11 ONCF 26 400000000          ONCF MAROC                  Office National des Chemins de Fer - Maroc 0.0511    104.43     103.77
-#&gt; 7         5.3 FEC 27 C 150000000 Fds Equipement Comm                             Fonds d'Equipement Communal FEC 0.0530    105.81     104.36
-#&gt; 8         5.98 SGMB 22 324200000                SGMB                       Societe Generale Marocaine de Banques 0.0598    105.87     111.15
-#&gt; 9       6,04 BMCI 22 A 255000000         BMCI BOURSE BANQUE MAROCAINE POUR LE COMMERCE &amp;L'INDUSTRIE -BMCI BOURSE 0.0604    105.67       0.00
-#&gt; 10     4.75 Attijar 24  45600000   Attijariwafa Bank                                        Attijariwafa Bank SA 0.0475    106.51       0.00
-#&gt; 11         4.75 CIH 25  53300000                 CIH                            Credit Immobilier et Hotelier SA 0.0475    106.57       0.00
-#&gt; 12        4.77 SGMB 25 238200000                SGMB                       Societe Generale Marocaine de Banques 0.0477    106.74       0.00
-#&gt; 13     4.42 CAM 22 Bds  42800000      Cred Agr Maroc                                    Credit Agricole du Maroc 0.0442    102.83       0.00
-#&gt; 14          4.8 CAM 25 290000000      Cred Agr Maroc                                    Credit Agricole du Maroc 0.0480    106.84       0.00
-#&gt; 15         4.52 CAM 25 122400000      Cred Agr Maroc                                    Credit Agricole du Maroc 0.0452    107.05     102.55
-#&gt; 16     4.13 Attijar 22  64800000   Attijariwafa Bank                                        Attijariwafa Bank SA 0.0413    102.84     104.11
-#&gt; 17         4.11 CAM 23  50000000      Cred Agr Maroc                                    Credit Agricole du Maroc 0.0411    102.92       0.00
-#&gt; 18         4.43 CAM 26  50000000      Cred Agr Maroc                                    Credit Agricole du Maroc 0.0443    105.82       0.00
-#&gt; 19     3.74 Attijar 26 100000000   Attijariwafa Bank                                        Attijariwafa Bank SA 0.0374    103.52      98.20
-#&gt; 20     3.93 CDM 26 Bds  55000000                 CDM                                          Credit du Maroc SA 0.0393    104.62       0.00
-#&gt; 21     4.07 OCP 50 Bds 554200000                 OCP                          Office Cherifien des Phosphates SA 0.0407    104.82       0.00
-#&gt; 22 3.44 Attijar 23 Bds             Attijariwafa Bank                                        Attijariwafa Bank SA 0.0344    102.46       0.00
-#&gt; 23 3.63 Attijar 24 Bds 300000000   Attijariwafa Bank                                        Attijariwafa Bank SA 0.0363    103.52       0.00
-#&gt; 24     4.22 CAM 27 Bds 202900000      Cred Agr Maroc                                    Credit Agricole du Maroc 0.0422    106.63       0.00
-#&gt; 25   3.69 Attij 24 Bds 150000000   Attijariwafa Bank                                        Attijariwafa Bank SA 0.0369    103.69       0.00
-#&gt; 26       Attija 24 FRB   5000000   Attijariwafa Bank                                        Attijariwafa Bank SA 0.0000    101.10       0.00
-#&gt; 27          OCP 35 FRB 183000000                 OCP                          Office Cherifien des Phosphates SA 0.0000    106.32       0.00
-#&gt; 28     4.02 CIH 28 Bds  82600000                 CIH                            Credit Immobilier et Hotelier SA 0.0402    106.26       0.00</div></pre>
+#&gt; 1         5.12 ONCF 25 241200000          ONCF MAROC                  Office National des Chemins de Fer - Maroc 0.0512    102.75     103.28
+#&gt; 2   Ob ONCF 201206 415 400000000          ONCF MAROC                  Office National des Chemins de Fer - Maroc 0.0415    100.55     100.42
+#&gt; 3    5.62 Lydec -A- 25 330200000               Lydec                                                    Lydec SA 0.0562    104.48     105.89
+#&gt; 4         5.38 ONDA 20  73500000                ONDA                               Office National Des Aeroports 0.0538    100.05     105.73
+#&gt; 5          5.02 CDM 21  93100000                 CDM                                          Credit du Maroc SA 0.0502    100.75       0.00
+#&gt; 6         5.11 ONCF 26 400000000          ONCF MAROC                  Office National des Chemins de Fer - Maroc 0.0511    103.99     103.77
+#&gt; 7         5.3 FEC 27 C 150000000 Fds Equipement Comm                             Fonds d'Equipement Communal FEC 0.0530    105.38     104.36
+#&gt; 8         5.98 SGMB 22 324200000                SGMB                       Societe Generale Marocaine de Banques 0.0598    105.79     111.15
+#&gt; 9       6,04 BMCI 22 A 255000000         BMCI BOURSE BANQUE MAROCAINE POUR LE COMMERCE &amp;L'INDUSTRIE -BMCI BOURSE 0.0604    105.63       0.00
+#&gt; 10     4.75 Attijar 24  45600000   Attijariwafa Bank                                        Attijariwafa Bank SA 0.0475    105.69       0.00
+#&gt; 11         4.75 CIH 25  53300000                 CIH                            Credit Immobilier et Hotelier SA 0.0475    105.75       0.00
+#&gt; 12        4.77 SGMB 25 238200000                SGMB                       Societe Generale Marocaine de Banques 0.0477    105.93       0.00
+#&gt; 13     4.42 CAM 22 Bds  42800000      Cred Agr Maroc                                    Credit Agricole du Maroc 0.0442    102.80       0.00
+#&gt; 14          4.8 CAM 25 290000000      Cred Agr Maroc                                    Credit Agricole du Maroc 0.0480    106.05       0.00
+#&gt; 15         4.52 CAM 25 122400000      Cred Agr Maroc                                    Credit Agricole du Maroc 0.0452    106.26     102.55
+#&gt; 16     4.13 Attijar 22  64800000   Attijariwafa Bank                                        Attijariwafa Bank SA 0.0413    102.78     104.11
+#&gt; 17         4.11 CAM 23  50000000      Cred Agr Maroc                                    Credit Agricole du Maroc 0.0411    102.31       0.00
+#&gt; 18         4.43 CAM 26  50000000      Cred Agr Maroc                                    Credit Agricole du Maroc 0.0443    105.09       0.00
+#&gt; 19     3.74 Attijar 26 100000000   Attijariwafa Bank                                        Attijariwafa Bank SA 0.0374    102.81      98.20
+#&gt; 20     3.93 CDM 26 Bds  55000000                 CDM                                          Credit du Maroc SA 0.0393    103.86       0.00
+#&gt; 21     4.07 OCP 50 Bds 554200000                 OCP                          Office Cherifien des Phosphates SA 0.0407    104.07       0.00
+#&gt; 22 3.44 Attijar 23 Bds             Attijariwafa Bank                                        Attijariwafa Bank SA 0.0344    101.79       0.00
+#&gt; 23 3.63 Attijar 24 Bds 300000000   Attijariwafa Bank                                        Attijariwafa Bank SA 0.0363    102.73       0.00
+#&gt; 24     4.22 CAM 27 Bds 202900000      Cred Agr Maroc                                    Credit Agricole du Maroc 0.0422    105.83       0.00
+#&gt; 25   3.69 Attij 24 Bds 150000000   Attijariwafa Bank                                        Attijariwafa Bank SA 0.0369    102.89       0.00
+#&gt; 26       Attija 24 FRB   5000000   Attijariwafa Bank                                        Attijariwafa Bank SA 0.0000    100.32       0.00
+#&gt; 27          OCP 35 FRB 183000000                 OCP                          Office Cherifien des Phosphates SA 0.0000    105.51       0.00
+#&gt; 28     4.02 CIH 28 Bds  82600000                 CIH                            Credit Immobilier et Hotelier SA 0.0402    105.45       0.00</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
