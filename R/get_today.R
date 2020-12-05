@@ -15,5 +15,5 @@ get_today <- function(){
     get_html("http://leboursier.ma/component/option,com_api/format,json/method,getBasicStocksInfo/") -> df
     df$name = sub(" P?/?N?$", "", df$name)
    
-    setNames(df[nzchar(df$name), - 2], nm=c("name", "price", "variation"))
+    df[nzchar(df$name), -2]
 }

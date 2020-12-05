@@ -1,4 +1,3 @@
-
 #' Moroccan Market and Sector indices
 #' @description 
 #' Gets the Moroccan Market indices (`indices()`) or Sector indices (`sector_indices()`) that are listed in [**Le Boursier**](http://leboursier.ma/details/marche.html).

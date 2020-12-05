@@ -1,4 +1,3 @@
-
 #' Moroccan Bonds
 #'
 #' @description 

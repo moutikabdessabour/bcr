@@ -1,12 +1,16 @@
-
 #' Stock prices
-#' @details 
-#' Scraps the historical stock prices for the provided companies.
 #'
 #' @description 
-#' Scraps [**Le Boursier**](http://leboursier.ma/)'s API and get the historical prices for the specified companies.
-#'
-#' Returns a data.frame containing all the historical data for the specified stock.
+#' Scraps [**Le Boursier**](http://leboursier.ma/)'s and gets the historical prices for the specified companies.
+#' @return 
+#' Returns a `data.frame` containing all the historical data for the specified stock.
+#' * `date`: the date of the given record.
+#' * `open`: the opening price of the stock on `date`.
+#' * `high`:  the highest price.
+#' * `low`:  the lowest price.
+#' * `close`:  the closing price.
+#' * `volume`: Volume of stocks traded on `date`.
+#' 
 #' If the plural variant is used it'll add a `symbol` column that'll contain the name of the company.
 #' 
 #' @param x,... Company name as returned by the [get_today()] function

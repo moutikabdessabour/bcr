@@ -11,9 +11,13 @@ intraday <- function(name){
 }
 
 #' Intraday Prices
-#' @details Scraps the intraday stock prices for the provided companies
-#'
-#' Returns a data.frame containing all the intraday prices for the specified stocks.
+#' @description
+#' Scraps the intraday stock prices for the provided companies
+#' 
+#' @return 
+#' Returns a `data.frame` containing all the intraday prices for the specified stocks.
+#' * `time`: the time of the record.
+#' * `price`: the price at that time.
 #' Where the `symbol` column contains the name of the company.
 #'
 #' @param name,... Company names as returned by the [get_today()] function
