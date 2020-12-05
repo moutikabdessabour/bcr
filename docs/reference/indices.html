@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Moroccan Market and Sector indices — indices • bcr</title>
+<title>Moroccan Market and Sectoral indices — indices • bcr</title>
 
 
 <!-- jquery -->
@@ -41,8 +41,8 @@
   <link href="../extra.css" rel="stylesheet">
   
 
-<meta property="og:title" content="Moroccan Market and Sector indices — indices" />
-<meta property="og:description" content="Gets the Moroccan Market indices (indices()) or Sector indices (sector_indices()) that are listed in Le Boursier." />
+<meta property="og:title" content="Moroccan Market and Sectoral indices — indices" />
+<meta property="og:description" content="Gets the Moroccan Market indices (indices()) or Sectoral indices (sectoral_indices()) that are listed in Le Boursier." />
 
 
 
@@ -129,18 +129,18 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Moroccan Market and Sector indices</h1>
+    <h1>Moroccan Market and Sectoral indices</h1>
     <small class="dont-index">Source: <a href='https://github.com/moutikabdessabour/bcr/blob/master/R/indices.R'><code>R/indices.R</code></a></small>
     <div class="hidden name"><code>indices.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Gets the Moroccan Market indices (<code>indices()</code>) or Sector indices (<code>sector_indices()</code>) that are listed in <a href='http://leboursier.ma/details/marche.html'><strong>Le Boursier</strong></a>.</p>
+    <p>Gets the Moroccan Market indices (<code>indices()</code>) or Sectoral indices (<code>sectoral_indices()</code>) that are listed in <a href='http://leboursier.ma/details/marche.html'><strong>Le Boursier</strong></a>.</p>
     </div>
 
     <pre class="usage"><span class='fu'>indices</span><span class='op'>(</span><span class='op'>)</span>
 
-<span class='fu'>sector_indices</span><span class='op'>(</span><span class='op'>)</span></pre>
+<span class='fu'>sectoral_indices</span><span class='op'>(</span><span class='op'>)</span></pre>
 
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
@@ -157,7 +157,7 @@
 <li><p><code>high</code> : highest price of the index</p></li>
 </ul>
 
-<p>the <code>sector_indices()</code> function returns a <code>data.frame</code> with the following columns:</p><ul>
+<p>the <code>sectoral_indices()</code> function returns a <code>data.frame</code> with the following columns:</p><ul>
 <li><p><code>name</code> : name of the sector.</p></li>
 <li><p><code>price</code> : latest price of the index.</p></li>
 <li><p><code>variation</code> : variation of the price of the index.</p></li>
@@ -189,7 +189,7 @@
 #&gt; 20            CFG bond        CFG BOND OCT 25/09/2020 à 18:46   445.11     0.00   445.11      0.00     0.00     0.00
 #&gt; 21            CFG bond        CFG BOND OLT 25/09/2020 à 18:46   792.70     0.00   792.70      0.00     0.00     0.00
 #&gt; 22            CFG bond        CFG BOND OMT 25/09/2020 à 18:46   582.68     0.00   582.68      0.00     0.00     0.00
-#&gt; 23            CFG bond        CFG BOND OBL 25/09/2020 à 18:46   568.54     0.00   568.54      0.00     0.00     0.00</div><div class='input'><span class='fu'>sector_indices</span><span class='op'>(</span><span class='op'>)</span>
+#&gt; 23            CFG bond        CFG BOND OBL 25/09/2020 à 18:46   568.54     0.00   568.54      0.00     0.00     0.00</div><div class='input'><span class='fu'>sectoral_indices</span><span class='op'>(</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;                                                           name    price variation
 #&gt; 1                                   AGROALIMENTAIRE PRODUCTION 30986.64     -0.09
 #&gt; 2                                                   ASSURANCES  4075.67     -0.34
