@@ -28,9 +28,6 @@ If the plural variant is used it'll add a \code{symbol} column that'll contain t
 \description{
 Scraps \href{http://leboursier.ma/}{\strong{Le Boursier}}'s and gets the historical prices for the specified companies.
 }
-\details{
-Scraps the historical stock prices for the provided companies.
-}
 \examples{
 head(stock("Wafa Assur"), 20)
 head(stock(), 20) # same as runing stock("MASI")
