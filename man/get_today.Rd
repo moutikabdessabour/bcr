@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_today.R
 \name{get_today}
 \alias{get_today}
-\title{Latest daily variation of Morrocan stocks}
+\title{Latest daily variation of Moroccan stocks}
 \usage{
 get_today()
 }
