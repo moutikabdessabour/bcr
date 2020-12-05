@@ -2,7 +2,7 @@
 
 #' @export
 #'
-#' @rdname intraday
+#' @rdname intra_day
 #' @examples
 #' head(intraday(), 30)
 intraday <- function(name){
@@ -23,7 +23,7 @@ intraday <- function(name){
 #' @param name,... Company names as returned by the [get_today()] function
 #'
 #'
-#' @rdname intraday
+#' @rdname intra_day
 #' @export
 #' @examples
 #' intradays("Wafa Assur", "Nexans Maroc")
