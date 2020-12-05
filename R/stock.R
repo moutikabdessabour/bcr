@@ -25,7 +25,7 @@
 stock <- function(x) {
     #if(length(x)>1) do.call(stocks, as.list(x))
     #else 
-    if(missing(x)) x<-NULL
+    if(missing(x)) x<- NULL
     get_st(list_of_codes[tolower(list_of_codes$name) %in% tolower(x[[1]]), 2, drop=T])
 }
 
@@ -53,6 +53,6 @@ get_st <- function(x){
     get_html(paste0("https://www.leboursier.ma/index.php?option=com_api&view=api&format=json&method=get", if(bool) x else "Stock","OHLC", if(!bool) paste0("&ISIN=", x) ) ) -> df
 
     colnames(df) <- c("date", "open", "high", "low", "close", "volume")
-    df$date = as.POSIXct(df$date/1000, origin="1970-01-01", tz="Africa/Casablanca")
+    df$date = as.POSIXct(df$date/1000, origin="1970- 01- 01", tz="Africa/Casablanca")
     df
 }

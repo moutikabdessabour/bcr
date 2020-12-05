@@ -7,7 +7,7 @@
 #' head(intraday(), 30)
 intraday <- function(name){
     if(missing(name)) name<-NULL
-    bcr:::get_intra(list_of_codes[tolower(list_of_codes$name) %in% tolower(name[[1]]), 2, drop=T])
+    get_intra(list_of_codes[tolower(list_of_codes$name) %in% tolower(name[[1]]), 2, drop=T])
 }
 
 #' Intraday Prices
@@ -42,6 +42,6 @@ get_intra <- function(x){
     x <- if(missing(x) || is.null(x) || length(x)==0) "getMarketIntraday" else{ if(tolower(x)=="madex") "getMadexIntraday"  else paste0("getStockIntraday&ISIN=", x)}
     url <- paste0("www.leboursier.ma/index.php?option=com_api&view=api&format=json&method=" , x )
     
-    get_html(url)
+    setNames(get_html(url), nm=c("time", "price"))
 }
 

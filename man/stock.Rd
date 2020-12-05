@@ -12,11 +12,21 @@ stocks(...)
 \arguments{
 \item{x, ...}{Company name as returned by the \code{\link[=get_today]{get_today()}} function}
 }
-\description{
-Scraps \href{http://leboursier.ma/}{\strong{Le Boursier}}'s API and get the historical prices for the specified companies.
+\value{
+Returns a \code{data.frame} containing all the historical data for the specified stock.
+\itemize{
+\item \code{date}: the date of the given record.
+\item \code{open}: the opening price of the stock on \code{date}.
+\item \code{high}:  the highest price.
+\item \code{low}:  the lowest price.
+\item \code{close}:  the closing price.
+\item \code{volume}: Volume of stocks traded on \code{date}.
+}
 
-Returns a data.frame containing all the historical data for the specified stock.
 If the plural variant is used it'll add a \code{symbol} column that'll contain the name of the company.
+}
+\description{
+Scraps \href{http://leboursier.ma/}{\strong{Le Boursier}}'s and gets the historical prices for the specified companies.
 }
 \details{
 Scraps the historical stock prices for the provided companies.

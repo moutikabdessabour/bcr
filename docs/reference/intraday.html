@@ -42,7 +42,7 @@
   
 
 <meta property="og:title" content="Intraday Prices — intraday" />
-<meta property="og:description" content="Intraday Prices" />
+<meta property="og:description" content="Scraps the intraday stock prices for the provided companies" />
 
 
 
@@ -135,7 +135,7 @@
     </div>
 
     <div class="ref-description">
-    <p>Intraday Prices</p>
+    <p>Scraps the intraday stock prices for the provided companies</p>
     </div>
 
     <pre class="usage"><span class='fu'>intraday</span><span class='op'>(</span><span class='va'>name</span><span class='op'>)</span>
@@ -151,51 +151,51 @@
     </tr>
     </table>
 
-    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>Scraps the intraday stock prices for the provided companies</p>
-<p>Returns a data.frame containing all the intraday prices for the specified stocks.
-Where the <code>symbol</code> column contains the name of the company.</p>
+    <p>Returns a <code>data.frame</code> containing all the intraday prices for the specified stocks.</p><ul>
+<li><p><code>time</code>: the time of the record.</p></li>
+<li><p><code>price</code>: the price at that time.
+Where the <code>symbol</code> column contains the name of the company.</p></li>
+</ul>
+
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='fu'>intraday</span><span class='op'>(</span><span class='op'>)</span>, <span class='fl'>30</span><span class='op'>)</span>
-</div><div class='output co'>#&gt;      labels   prices
-#&gt; 1  09:30:03 11033.09
-#&gt; 2  09:30:10 11033.27
-#&gt; 3  09:30:11 11034.06
-#&gt; 4  09:30:15 11028.71
-#&gt; 5  09:30:16 11030.31
-#&gt; 6  09:30:35 11037.64
-#&gt; 7  09:30:37 11037.62
-#&gt; 8  09:30:39 11037.64
-#&gt; 9  09:30:39 11036.13
-#&gt; 10 09:30:39 11035.81
-#&gt; 11 09:30:39 11054.57
-#&gt; 12 09:30:45 11054.28
-#&gt; 13 09:30:46 11055.77
-#&gt; 14 09:30:47 11045.97
-#&gt; 15 09:30:48 11045.99
-#&gt; 16 09:30:51 11045.64
-#&gt; 17 09:30:51 11045.67
-#&gt; 18 09:30:54 11045.62
-#&gt; 19 09:30:54 11045.83
-#&gt; 20 09:30:55 11046.21
-#&gt; 21 09:30:55 11047.40
-#&gt; 22 09:31:41 11049.99
-#&gt; 23 09:32:23 11049.66
-#&gt; 24 09:35:44 11049.20
-#&gt; 25 09:38:47 11045.30
-#&gt; 26 09:40:16 11042.62
-#&gt; 27 09:40:39 11043.07
-#&gt; 28 09:42:59 11043.08
-#&gt; 29 09:43:31 11043.41
-#&gt; 30 09:43:56 11041.46</div><div class='input'><span class='fu'>intradays</span><span class='op'>(</span><span class='st'>"Wafa Assur"</span>, <span class='st'>"Nexans Maroc"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt;     labels  prices       symbol
-#&gt; 1 14:30:30  129.90 Nexans Maroc
-#&gt; 2 12:36:17 3661.00   Wafa Assur
-#&gt; 3 12:36:17 3661.00   Wafa Assur
-#&gt; 4 12:36:17 3660.00   Wafa Assur
-#&gt; 5 15:30:03 3475.00   Wafa Assur</div></pre>
+</div><div class='output co'>#&gt;        time    price
+#&gt; 1  09:30:01 10972.82
+#&gt; 2  09:30:03 10973.14
+#&gt; 3  09:30:08 10969.61
+#&gt; 4  09:30:15 10968.53
+#&gt; 5  09:30:27 10968.90
+#&gt; 6  09:30:27 10968.37
+#&gt; 7  09:30:27 10969.94
+#&gt; 8  09:30:36 10969.98
+#&gt; 9  09:30:39 10968.69
+#&gt; 10 09:30:39 10968.19
+#&gt; 11 09:30:41 10968.85
+#&gt; 12 09:30:44 10972.75
+#&gt; 13 09:30:46 10974.46
+#&gt; 14 09:30:47 10973.53
+#&gt; 15 09:30:51 10977.54
+#&gt; 16 09:30:52 10980.40
+#&gt; 17 09:30:56 10994.77
+#&gt; 18 09:30:56 10997.08
+#&gt; 19 09:30:58 10997.56
+#&gt; 20 09:30:58 10997.64
+#&gt; 21 09:30:58 10997.71
+#&gt; 22 09:31:16 10997.85
+#&gt; 23 09:31:16 10997.85
+#&gt; 24 09:31:16 10997.86
+#&gt; 25 09:31:59 10997.90
+#&gt; 26 09:31:59 10997.93
+#&gt; 27 09:33:57 10987.91
+#&gt; 28 09:34:35 10987.85
+#&gt; 29 09:35:32 10987.85
+#&gt; 30 09:35:32 10987.85</div><div class='input'><span class='fu'>intradays</span><span class='op'>(</span><span class='st'>"Wafa Assur"</span>, <span class='st'>"Nexans Maroc"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;       time   price       symbol
+#&gt; 1 14:30:31  130.00 Nexans Maroc
+#&gt; 2 15:30:52 3551.00   Wafa Assur</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
