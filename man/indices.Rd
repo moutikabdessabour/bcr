@@ -2,12 +2,12 @@
 % Please edit documentation in R/indices.R
 \name{indices}
 \alias{indices}
-\alias{sector_indices}
-\title{Moroccan Market and Sector indices}
+\alias{sectoral_indices}
+\title{Moroccan Market and Sectoral indices}
 \usage{
 indices()
 
-sector_indices()
+sectoral_indices()
 }
 \value{
 the \code{indices()} function returns a \code{data.frame} with the following columns:
@@ -23,7 +23,7 @@ the \code{indices()} function returns a \code{data.frame} with the following col
 \item \code{high} : highest price of the index
 }
 
-the \code{sector_indices()} function returns a \code{data.frame} with the following columns:
+the \code{sectoral_indices()} function returns a \code{data.frame} with the following columns:
 \itemize{
 \item \code{name} : name of the sector.
 \item \code{price} : latest price of the index.
@@ -31,9 +31,9 @@ the \code{sector_indices()} function returns a \code{data.frame} with the follow
 }
 }
 \description{
-Gets the Moroccan Market indices (\code{indices()}) or Sector indices (\code{sector_indices()}) that are listed in \href{http://leboursier.ma/details/marche.html}{\strong{Le Boursier}}.
+Gets the Moroccan Market indices (\code{indices()}) or Sectoral indices (\code{sectoral_indices()}) that are listed in \href{http://leboursier.ma/details/marche.html}{\strong{Le Boursier}}.
 }
 \examples{
 indices()
-sector_indices()
+sectoral_indices()
 }
