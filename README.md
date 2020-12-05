@@ -7,7 +7,7 @@
 
 [![CRAN
 status](https://www.r-pkg.org/badges/version/bcr)](https://cran.r-project.org/package=bcr)
-[![Dev version](https://img.shields.io/badge/dev%20-0.1.1-brightgreen.svg)](https://github.com/moutikabdessabour/bcr)
+[![](https://img.shields.io/badge/dev%20-0.1.1-brightgreen.svg)](https://github.com/moutikabdessabour/bcr)
 [![CRAN
 checks](https://cranchecks.info/badges/worst/bcr)](https://cran.r-project.org/web/checks/check_results_bcr.html)
 [![Lifecycle:
@@ -25,7 +25,7 @@ Data provided by this package:
   - Listing of **Moroccan Bonds**.
   - Latest *price variation* of **Moroccan stocks** (Including **MASI**
     and **MADEX** indices).
-  - Listing of **Moroccan Market and Sectorial Indices**.
+  - Listing of **Moroccan Market and Sectoral Indices**.
   - Historical *price* data of **Moroccan stocks**.
   - Intraday variation of **Moroccan stocks**.
 
