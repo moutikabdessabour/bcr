@@ -1,4 +1,4 @@
-#' Latest daily variation of Morrocan stocks
+#' Latest daily variation of Moroccan stocks
 #' @description 
 #' Get the last variation of all stocks that are available in the stock exchange and the MASI/MADEX indices.
 #' @return
