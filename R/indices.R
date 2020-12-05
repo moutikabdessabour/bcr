@@ -1,7 +1,23 @@
 
 #' Moroccan Market and Sector indices
 #' @description 
-#' Gets the Moroccan Market and Sector indices that are listed in [**Le Boursier**](http://leboursier.ma/details/marche.html).
+#' Gets the Moroccan Market indices (`indices()`) or Sector indices (`sector_indices()`) that are listed in [**Le Boursier**](http://leboursier.ma/details/marche.html).
+#' @return
+#' the `indices()` function returns a `data.frame` with the following columns:
+#' * `type` : the category of the index.
+#' * `name` : name of the index.
+#' * `last_date` : last date the price of the index changed.
+#' * `price` : the price of the index.
+#' * `open` : the opening price of the index.
+#' * `close` : the closing price of the index.
+#' * `variation` : variation of the price.
+#' * `low` : lowest price of the index.
+#' * `high` : highest price of the index
+#' 
+#' the `sector_indices()` function returns a `data.frame` with the following columns:
+#' * `name` : name of the sector.
+#' * `price` : latest price of the index.
+#' * `variation` : variation of the price of the index.
 #' @export
 #' @rdname indices
 #' @examples

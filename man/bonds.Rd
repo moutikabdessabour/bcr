@@ -2,13 +2,24 @@
 % Please edit documentation in R/bonds.R
 \name{bonds}
 \alias{bonds}
-\title{Scraps the data of the Moroccan Bonds}
+\title{Moroccan Bonds}
 \usage{
 bonds()
 }
+\value{
+Returns a \code{data.frame} containing :
+\itemize{
+\item \code{bond_name}: name of the bond.
+\item \code{issued}: number of issued bonds.
+\item \code{issuer}: the company that issued the bond.
+\item \code{full_name}: full name of the bond issuer.
+\item \code{rate}: rate of return.
+\item \code{price_ref}: first price.
+\item \code{price_last}: latest price.
+}
+}
 \description{
-Returns a data.frame containing all the bonds listed in \href{http://leboursier.ma/details/marche.html}{\strong{Le Boursier}}.
-The column names are self explanatory except for \code{full_name} which stands for the full name of the bond issuer.
+Scraps all the bonds listed in \href{http://leboursier.ma/details/marche.html}{\strong{Le Boursier}}.
 }
 \examples{
 bonds()

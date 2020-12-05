@@ -9,8 +9,29 @@ indices()
 
 sector_indices()
 }
+\value{
+the \code{indices()} function returns a \code{data.frame} with the following columns:
+\itemize{
+\item \code{type} : the category of the index.
+\item \code{name} : name of the index.
+\item \code{last_date} : last date the price of the index changed.
+\item \code{price} : the price of the index.
+\item \code{open} : the opening price of the index.
+\item \code{close} : the closing price of the index.
+\item \code{variation} : variation of the price.
+\item \code{low} : lowest price of the index.
+\item \code{high} : highest price of the index
+}
+
+the \code{sector_indices()} function returns a \code{data.frame} with the following columns:
+\itemize{
+\item \code{name} : name of the sector.
+\item \code{price} : latest price of the index.
+\item \code{variation} : variation of the price of the index.
+}
+}
 \description{
-Gets the Moroccan Market and Sector indices that are listed in \href{http://leboursier.ma/details/marche.html}{\strong{Le Boursier}}.
+Gets the Moroccan Market indices (\code{indices()}) or Sector indices (\code{sector_indices()}) that are listed in \href{http://leboursier.ma/details/marche.html}{\strong{Le Boursier}}.
 }
 \examples{
 indices()

@@ -42,9 +42,7 @@
   
 
 <meta property="og:title" content="Stock prices — stock" />
-<meta property="og:description" content="Scraps Le Boursier's API and get the historical prices for the specified companies.
-Returns a data.frame containing all the historical data for the specified stock.
-If the plural variant is used it'll add a symbol column that'll contain the name of the company." />
+<meta property="og:description" content="Scraps Le Boursier's and gets the historical prices for the specified companies." />
 
 
 
@@ -137,9 +135,7 @@ If the plural variant is used it'll add a symbol column that'll contain the name
     </div>
 
     <div class="ref-description">
-    <p>Scraps <a href='http://leboursier.ma/'><strong>Le Boursier</strong></a>'s API and get the historical prices for the specified companies.</p>
-<p>Returns a data.frame containing all the historical data for the specified stock.
-If the plural variant is used it'll add a <code>symbol</code> column that'll contain the name of the company.</p>
+    <p>Scraps <a href='http://leboursier.ma/'><strong>Le Boursier</strong></a>'s and gets the historical prices for the specified companies.</p>
     </div>
 
     <pre class="usage"><span class='fu'>stock</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span>
@@ -155,6 +151,18 @@ If the plural variant is used it'll add a <code>symbol</code> column that'll con
     </tr>
     </table>
 
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>Returns a <code>data.frame</code> containing all the historical data for the specified stock.</p><ul>
+<li><p><code>date</code>: the date of the given record.</p></li>
+<li><p><code>open</code>: the opening price of the stock on <code>date</code>.</p></li>
+<li><p><code>high</code>:  the highest price.</p></li>
+<li><p><code>low</code>:  the lowest price.</p></li>
+<li><p><code>close</code>:  the closing price.</p></li>
+<li><p><code>volume</code>: Volume of stocks traded on <code>date</code>.</p></li>
+</ul>
+
+<p>If the plural variant is used it'll add a <code>symbol</code> column that'll contain the name of the company.</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>Scraps the historical stock prices for the provided companies.</p>
@@ -162,89 +170,89 @@ If the plural variant is used it'll add a <code>symbol</code> column that'll con
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='fu'>stock</span><span class='op'>(</span><span class='st'>"Wafa Assur"</span><span class='op'>)</span>, <span class='fl'>20</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;          date open high  low close volume
-#&gt; 1  2015-11-26 3690 3690 3690  3690      6
-#&gt; 2  2015-11-30 3580 3580 3500  3500    195
-#&gt; 3  2015-12-02 3500 3500 3450  3450    332
-#&gt; 4  2015-12-03 3450 3452 3450  3450     84
-#&gt; 5  2015-12-04 3500 3500 3500  3500     10
-#&gt; 6  2015-12-07 3400 3400 3313  3313     56
-#&gt; 7  2015-12-09 3340 3340 3301  3301    169
-#&gt; 8  2015-12-10 3104 3151 3104  3151    633
-#&gt; 9  2015-12-11 3121 3340 3120  3340    304
-#&gt; 10 2015-12-15 3152 3165 3140  3165    155
-#&gt; 11 2015-12-16 3298 3298 3298  3298      7
-#&gt; 12 2015-12-18 3250 3250 3250  3250     27
-#&gt; 13 2015-12-21 3056 3275 3056  3275   2084
-#&gt; 14 2015-12-23 3259 3259 3250  3258   1155
-#&gt; 15 2015-12-28 3100 3279 3100  3279   1170
-#&gt; 16 2015-12-29 3157 3249 3126  3126   1096
-#&gt; 17 2015-12-30 2980 3279 2980  3279   2018
-#&gt; 18 2015-12-31 3270 3270 3270  3270    600
-#&gt; 19 2016-01-05 3130 3130 3130  3130    931
-#&gt; 20 2016-01-06 3131 3131 3130  3130    110</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='fu'>stock</span><span class='op'>(</span><span class='op'>)</span>, <span class='fl'>20</span><span class='op'>)</span> <span class='co'># same as runing stock("MASI")</span>
+#&gt; 1  2015-12-02 3500 3500 3450  3450    332
+#&gt; 2  2015-12-03 3450 3452 3450  3450     84
+#&gt; 3  2015-12-04 3500 3500 3500  3500     10
+#&gt; 4  2015-12-07 3400 3400 3313  3313     56
+#&gt; 5  2015-12-09 3340 3340 3301  3301    169
+#&gt; 6  2015-12-10 3104 3151 3104  3151    633
+#&gt; 7  2015-12-11 3121 3340 3120  3340    304
+#&gt; 8  2015-12-15 3152 3165 3140  3165    155
+#&gt; 9  2015-12-16 3298 3298 3298  3298      7
+#&gt; 10 2015-12-18 3250 3250 3250  3250     27
+#&gt; 11 2015-12-21 3056 3275 3056  3275   2084
+#&gt; 12 2015-12-23 3259 3259 3250  3258   1155
+#&gt; 13 2015-12-28 3100 3279 3100  3279   1170
+#&gt; 14 2015-12-29 3157 3249 3126  3126   1096
+#&gt; 15 2015-12-30 2980 3279 2980  3279   2018
+#&gt; 16 2015-12-31 3270 3270 3270  3270    600
+#&gt; 17 2016-01-05 3130 3130 3130  3130    931
+#&gt; 18 2016-01-06 3131 3131 3130  3130    110
+#&gt; 19 2016-01-07 3300 3300 3300  3300      8
+#&gt; 20 2016-01-08 3280 3280 3280  3280   1000</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='fu'>stock</span><span class='op'>(</span><span class='op'>)</span>, <span class='fl'>20</span><span class='op'>)</span> <span class='co'># same as runing stock("MASI")</span>
 </div><div class='output co'>#&gt;          date    open    high     low   close volume
-#&gt; 1  2015-11-25 9103.71 9122.70 9095.00 9122.70     NA
-#&gt; 2  2015-11-26 9105.24 9119.59 9044.11 9108.93     NA
-#&gt; 3  2015-11-27 9108.71 9135.61 9079.33 9085.25     NA
-#&gt; 4  2015-11-30 9075.21 9113.27 9051.23 9093.21     NA
-#&gt; 5  2015-12-01 9085.12 9087.08 9050.43 9081.54     NA
-#&gt; 6  2015-12-02 9082.84 9116.88 9050.97 9050.97     NA
-#&gt; 7  2015-12-03 9039.33 9064.14 9034.78 9052.79     NA
-#&gt; 8  2015-12-04 9075.98 9099.75 9027.76 9069.55     NA
-#&gt; 9  2015-12-07 9066.51 9068.24 9017.34 9017.34     NA
-#&gt; 10 2015-12-08 9032.88 9043.73 8998.44 9008.41     NA
-#&gt; 11 2015-12-09 8976.44 8990.56 8910.13 8910.13     NA
-#&gt; 12 2015-12-10 8912.39 8920.21 8858.52 8874.88     NA
-#&gt; 13 2015-12-11 8866.93 8883.76 8847.28 8856.28     NA
-#&gt; 14 2015-12-14 8871.15 8883.68 8836.80 8865.63     NA
-#&gt; 15 2015-12-15 8864.36 8884.87 8796.65 8796.65     NA
-#&gt; 16 2015-12-16 8796.65 8870.44 8796.65 8864.75     NA
-#&gt; 17 2015-12-17 8863.02 8870.07 8812.57 8846.45     NA
-#&gt; 18 2015-12-18 8843.70 8860.92 8821.78 8860.92     NA
-#&gt; 19 2015-12-21 8861.94 8864.25 8789.89 8864.25     NA
-#&gt; 20 2015-12-22 8862.78 8878.53 8848.41 8863.38     NA</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='fu'>stock</span><span class='op'>(</span><span class='st'>"MADEX"</span><span class='op'>)</span>, <span class='fl'>20</span><span class='op'>)</span>
+#&gt; 1  2015-12-02 9082.84 9116.88 9050.97 9050.97     NA
+#&gt; 2  2015-12-03 9039.33 9064.14 9034.78 9052.79     NA
+#&gt; 3  2015-12-04 9075.98 9099.75 9027.76 9069.55     NA
+#&gt; 4  2015-12-07 9066.51 9068.24 9017.34 9017.34     NA
+#&gt; 5  2015-12-08 9032.88 9043.73 8998.44 9008.41     NA
+#&gt; 6  2015-12-09 8976.44 8990.56 8910.13 8910.13     NA
+#&gt; 7  2015-12-10 8912.39 8920.21 8858.52 8874.88     NA
+#&gt; 8  2015-12-11 8866.93 8883.76 8847.28 8856.28     NA
+#&gt; 9  2015-12-14 8871.15 8883.68 8836.80 8865.63     NA
+#&gt; 10 2015-12-15 8864.36 8884.87 8796.65 8796.65     NA
+#&gt; 11 2015-12-16 8796.65 8870.44 8796.65 8864.75     NA
+#&gt; 12 2015-12-17 8863.02 8870.07 8812.57 8846.45     NA
+#&gt; 13 2015-12-18 8843.70 8860.92 8821.78 8860.92     NA
+#&gt; 14 2015-12-21 8861.94 8864.25 8789.89 8864.25     NA
+#&gt; 15 2015-12-22 8862.78 8878.53 8848.41 8863.38     NA
+#&gt; 16 2015-12-23 8858.99 8893.10 8836.15 8893.10     NA
+#&gt; 17 2015-12-28 8885.18 8905.83 8836.22 8856.06     NA
+#&gt; 18 2015-12-29 8817.89 8873.96 8795.62 8873.96     NA
+#&gt; 19 2015-12-30 8873.72 8873.72 8802.90 8868.85     NA
+#&gt; 20 2015-12-31 8867.46 8925.71 8843.28 8925.71     NA</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='fu'>stock</span><span class='op'>(</span><span class='st'>"MADEX"</span><span class='op'>)</span>, <span class='fl'>20</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;          date    open    high     low   close volume
-#&gt; 1  2015-11-25 7420.81 7437.77 7413.07 7437.77     NA
-#&gt; 2  2015-11-26 7421.85 7435.50 7368.80 7435.50     NA
-#&gt; 3  2015-11-27 7435.61 7458.76 7413.26 7413.26     NA
-#&gt; 4  2015-11-30 7404.35 7438.40 7383.71 7421.15     NA
-#&gt; 5  2015-12-01 7414.07 7419.45 7383.39 7411.14     NA
-#&gt; 6  2015-12-02 7412.29 7439.27 7381.59 7381.59     NA
-#&gt; 7  2015-12-03 7371.26 7393.34 7367.26 7383.32     NA
-#&gt; 8  2015-12-04 7402.89 7424.14 7363.78 7396.48     NA
-#&gt; 9  2015-12-07 7393.78 7395.28 7342.49 7342.49     NA
-#&gt; 10 2015-12-08 7355.33 7364.37 7326.03 7334.30     NA
-#&gt; 11 2015-12-09 7305.91 7318.45 7247.39 7247.39     NA
-#&gt; 12 2015-12-10 7249.40 7256.34 7204.57 7222.72     NA
-#&gt; 13 2015-12-11 7215.67 7230.61 7201.66 7208.81     NA
-#&gt; 14 2015-12-14 7222.01 7234.24 7192.55 7218.15     NA
-#&gt; 15 2015-12-15 7217.02 7235.38 7157.31 7157.31     NA
-#&gt; 16 2015-12-16 7157.31 7223.58 7157.31 7218.21     NA
-#&gt; 17 2015-12-17 7216.68 7222.93 7168.74 7198.81     NA
-#&gt; 18 2015-12-18 7196.37 7211.22 7178.34 7211.22     NA
-#&gt; 19 2015-12-21 7212.14 7217.25 7151.24 7217.25     NA
-#&gt; 20 2015-12-22 7216.69 7229.93 7202.33 7214.47     NA</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='fu'>stocks</span><span class='op'>(</span><span class='st'>"Masi"</span>, <span class='st'>"MADEX"</span><span class='op'>)</span>, <span class='fl'>20</span><span class='op'>)</span>
+#&gt; 1  2015-12-02 7412.29 7439.27 7381.59 7381.59     NA
+#&gt; 2  2015-12-03 7371.26 7393.34 7367.26 7383.32     NA
+#&gt; 3  2015-12-04 7402.89 7424.14 7363.78 7396.48     NA
+#&gt; 4  2015-12-07 7393.78 7395.28 7342.49 7342.49     NA
+#&gt; 5  2015-12-08 7355.33 7364.37 7326.03 7334.30     NA
+#&gt; 6  2015-12-09 7305.91 7318.45 7247.39 7247.39     NA
+#&gt; 7  2015-12-10 7249.40 7256.34 7204.57 7222.72     NA
+#&gt; 8  2015-12-11 7215.67 7230.61 7201.66 7208.81     NA
+#&gt; 9  2015-12-14 7222.01 7234.24 7192.55 7218.15     NA
+#&gt; 10 2015-12-15 7217.02 7235.38 7157.31 7157.31     NA
+#&gt; 11 2015-12-16 7157.31 7223.58 7157.31 7218.21     NA
+#&gt; 12 2015-12-17 7216.68 7222.93 7168.74 7198.81     NA
+#&gt; 13 2015-12-18 7196.37 7211.22 7178.34 7211.22     NA
+#&gt; 14 2015-12-21 7212.14 7217.25 7151.24 7217.25     NA
+#&gt; 15 2015-12-22 7216.69 7229.93 7202.33 7214.47     NA
+#&gt; 16 2015-12-23 7210.58 7239.25 7190.30 7239.25     NA
+#&gt; 17 2015-12-28 7232.22 7250.55 7188.78 7210.59     NA
+#&gt; 18 2015-12-29 7176.72 7223.24 7160.20 7223.24     NA
+#&gt; 19 2015-12-30 7223.02 7223.02 7161.35 7215.13     NA
+#&gt; 20 2015-12-31 7213.88 7255.21 7195.10 7255.21     NA</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='fu'>stocks</span><span class='op'>(</span><span class='st'>"Masi"</span>, <span class='st'>"MADEX"</span><span class='op'>)</span>, <span class='fl'>20</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;          date    open    high     low   close volume symbol
-#&gt; 1  2015-11-25 9103.71 9122.70 9095.00 9122.70     NA   MASI
-#&gt; 2  2015-11-26 9105.24 9119.59 9044.11 9108.93     NA   MASI
-#&gt; 3  2015-11-27 9108.71 9135.61 9079.33 9085.25     NA   MASI
-#&gt; 4  2015-11-30 9075.21 9113.27 9051.23 9093.21     NA   MASI
-#&gt; 5  2015-12-01 9085.12 9087.08 9050.43 9081.54     NA   MASI
-#&gt; 6  2015-12-02 9082.84 9116.88 9050.97 9050.97     NA   MASI
-#&gt; 7  2015-12-03 9039.33 9064.14 9034.78 9052.79     NA   MASI
-#&gt; 8  2015-12-04 9075.98 9099.75 9027.76 9069.55     NA   MASI
-#&gt; 9  2015-12-07 9066.51 9068.24 9017.34 9017.34     NA   MASI
-#&gt; 10 2015-12-08 9032.88 9043.73 8998.44 9008.41     NA   MASI
-#&gt; 11 2015-12-09 8976.44 8990.56 8910.13 8910.13     NA   MASI
-#&gt; 12 2015-12-10 8912.39 8920.21 8858.52 8874.88     NA   MASI
-#&gt; 13 2015-12-11 8866.93 8883.76 8847.28 8856.28     NA   MASI
-#&gt; 14 2015-12-14 8871.15 8883.68 8836.80 8865.63     NA   MASI
-#&gt; 15 2015-12-15 8864.36 8884.87 8796.65 8796.65     NA   MASI
-#&gt; 16 2015-12-16 8796.65 8870.44 8796.65 8864.75     NA   MASI
-#&gt; 17 2015-12-17 8863.02 8870.07 8812.57 8846.45     NA   MASI
-#&gt; 18 2015-12-18 8843.70 8860.92 8821.78 8860.92     NA   MASI
-#&gt; 19 2015-12-21 8861.94 8864.25 8789.89 8864.25     NA   MASI
-#&gt; 20 2015-12-22 8862.78 8878.53 8848.41 8863.38     NA   MASI</div></pre>
+#&gt; 1  2015-12-02 9082.84 9116.88 9050.97 9050.97     NA   MASI
+#&gt; 2  2015-12-03 9039.33 9064.14 9034.78 9052.79     NA   MASI
+#&gt; 3  2015-12-04 9075.98 9099.75 9027.76 9069.55     NA   MASI
+#&gt; 4  2015-12-07 9066.51 9068.24 9017.34 9017.34     NA   MASI
+#&gt; 5  2015-12-08 9032.88 9043.73 8998.44 9008.41     NA   MASI
+#&gt; 6  2015-12-09 8976.44 8990.56 8910.13 8910.13     NA   MASI
+#&gt; 7  2015-12-10 8912.39 8920.21 8858.52 8874.88     NA   MASI
+#&gt; 8  2015-12-11 8866.93 8883.76 8847.28 8856.28     NA   MASI
+#&gt; 9  2015-12-14 8871.15 8883.68 8836.80 8865.63     NA   MASI
+#&gt; 10 2015-12-15 8864.36 8884.87 8796.65 8796.65     NA   MASI
+#&gt; 11 2015-12-16 8796.65 8870.44 8796.65 8864.75     NA   MASI
+#&gt; 12 2015-12-17 8863.02 8870.07 8812.57 8846.45     NA   MASI
+#&gt; 13 2015-12-18 8843.70 8860.92 8821.78 8860.92     NA   MASI
+#&gt; 14 2015-12-21 8861.94 8864.25 8789.89 8864.25     NA   MASI
+#&gt; 15 2015-12-22 8862.78 8878.53 8848.41 8863.38     NA   MASI
+#&gt; 16 2015-12-23 8858.99 8893.10 8836.15 8893.10     NA   MASI
+#&gt; 17 2015-12-28 8885.18 8905.83 8836.22 8856.06     NA   MASI
+#&gt; 18 2015-12-29 8817.89 8873.96 8795.62 8873.96     NA   MASI
+#&gt; 19 2015-12-30 8873.72 8873.72 8802.90 8868.85     NA   MASI
+#&gt; 20 2015-12-31 8867.46 8925.71 8843.28 8925.71     NA   MASI</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

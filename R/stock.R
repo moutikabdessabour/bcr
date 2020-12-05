@@ -1,12 +1,16 @@
-
 #' Stock prices
-#' @details 
-#' Scraps the historical stock prices for the provided companies.
 #'
 #' @description 
-#' Scraps [**Le Boursier**](http://leboursier.ma/)'s API and get the historical prices for the specified companies.
-#'
-#' Returns a data.frame containing all the historical data for the specified stock.
+#' Scraps [**Le Boursier**](http://leboursier.ma/)'s and gets the historical prices for the specified companies.
+#' @return 
+#' Returns a `data.frame` containing all the historical data for the specified stock.
+#' * `date`: the date of the given record.
+#' * `open`: the opening price of the stock on `date`.
+#' * `high`:  the highest price.
+#' * `low`:  the lowest price.
+#' * `close`:  the closing price.
+#' * `volume`: Volume of stocks traded on `date`.
+#' 
 #' If the plural variant is used it'll add a `symbol` column that'll contain the name of the company.
 #' 
 #' @param x,... Company name as returned by the [get_today()] function
@@ -21,7 +25,7 @@
 stock <- function(x) {
     #if(length(x)>1) do.call(stocks, as.list(x))
     #else 
-    if(missing(x)) x<-NULL
+    if(missing(x)) x<- NULL
     get_st(list_of_codes[tolower(list_of_codes$name) %in% tolower(x[[1]]), 2, drop=T])
 }
 
@@ -49,6 +53,6 @@ get_st <- function(x){
     get_html(paste0("https://www.leboursier.ma/index.php?option=com_api&view=api&format=json&method=get", if(bool) x else "Stock","OHLC", if(!bool) paste0("&ISIN=", x) ) ) -> df
 
     colnames(df) <- c("date", "open", "high", "low", "close", "volume")
-    df$date = as.POSIXct(df$date/1000, origin="1970-01-01", tz="Africa/Casablanca")
+    df$date = as.POSIXct(df$date/1000, origin="1970- 01- 01", tz="Africa/Casablanca")
     df
 }
