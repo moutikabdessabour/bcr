@@ -1,5 +1,11 @@
-# bcr 0.1.0
+# bcr v0.1.2
+* Solved Empty API result issue. 
 
+# bcr v0.1.1
+* Moved `sector_indices()` to `sectoral_indices()`.
+* Fixed minor bugs.
+
+# bcr v0.1.0
 * Initial release
 * `indices()`, `sector_indices()` functions to get Moroccan market indices and Sector indices
 * `get_today()` Functions to get the current variation of the stocks.
