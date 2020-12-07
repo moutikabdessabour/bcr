@@ -43,7 +43,7 @@ index_types <- c("ST Index", "Rentability Index", "Currency Index", "Moroccan bo
 #' @importFrom stats setNames
 get_html <- function(url){
     fromJSON(rawToChar(content(GET(url), "raw")[-(1:3)]))$result -> result
-    if(nrow(result)==1) setNames(do.call(data.frame, result), nm=names(result)) else as.data.frame(result)
+    if(nrow(result)==1 & length(result[[1,1]])>0) setNames(do.call(data.frame, result), nm=names(result)) else as.data.frame(result)
 }
 
 
