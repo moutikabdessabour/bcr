@@ -7,8 +7,7 @@
 
 [![CRAN
 status](https://www.r-pkg.org/badges/version/bcr)](https://cran.r-project.org/package=bcr)
-[![](https://img.shields.io/badge/dev%20-0.1.1.9000-brightgreen.svg)](https://github.com/moutikabdessabour/bcr)
-<!-- [![CRAN checks](https://cranchecks.info/badges/worst/bcr)](https://cran.r-project.org/web/checks/check_results_bcr.html) -->
+[![](https://img.shields.io/badge/dev%20-0.1.1.9000-brightgreen.svg)](https://github.com/moutikabdessabour/bcr)<!-- [![CRAN checks](https://cranchecks.info/badges/worst/bcr)](https://cran.r-project.org/web/checks/check_results_bcr.html) -->
 [![Lifecycle:
 maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 [![CRAN RStudio mirror
