@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# bcr
+# Bourse Casablanca in R
 
 <!-- badges: start -->
 
@@ -40,7 +40,7 @@ Or to get the development version first install the `{remotes}` package
 then use the line below:
 
 ``` r
-# install remotes first if you don't have it installed
+# install remotes first if it isn't already installed
 # install.packages("remotes")
 # install the development version
 remotes::install_github("moutikabdessabour/bcr")
@@ -48,5 +48,5 @@ remotes::install_github("moutikabdessabour/bcr")
 
 ## Documentation
 
-All you need to know about how to use thi package is provided
-[here](https://moutikabdessabour.github.io/bcr/reference/index.html).
+All you need to know about how to use this package is provided
+[here](https://moutikabdessabour.github.io/bcr/dev/reference/index.html).
