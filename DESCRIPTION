@@ -1,6 +1,6 @@
 Package: bcr
 Title: Extract Moroccan Financial Data
-Version: 0.1.1.9000
+Version: 0.1.1.9
 Authors@R: 
     person(given = "Abdessabour",
            family = "Moutik",
