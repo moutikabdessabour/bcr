@@ -84,7 +84,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">bcr</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.2</span>
       </span>
     </div>
 
@@ -163,39 +163,43 @@ Where the <code>symbol</code> column contains the name of the company.</p></li>
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='fu'>intraday</span><span class='op'>(</span><span class='op'>)</span>, <span class='fl'>30</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;        time    price
-#&gt; 1  09:30:01 10972.82
-#&gt; 2  09:30:03 10973.14
-#&gt; 3  09:30:08 10969.61
-#&gt; 4  09:30:15 10968.53
-#&gt; 5  09:30:27 10968.90
-#&gt; 6  09:30:27 10968.37
-#&gt; 7  09:30:27 10969.94
-#&gt; 8  09:30:36 10969.98
-#&gt; 9  09:30:39 10968.69
-#&gt; 10 09:30:39 10968.19
-#&gt; 11 09:30:41 10968.85
-#&gt; 12 09:30:44 10972.75
-#&gt; 13 09:30:46 10974.46
-#&gt; 14 09:30:47 10973.53
-#&gt; 15 09:30:51 10977.54
-#&gt; 16 09:30:52 10980.40
-#&gt; 17 09:30:56 10994.77
-#&gt; 18 09:30:56 10997.08
-#&gt; 19 09:30:58 10997.56
-#&gt; 20 09:30:58 10997.64
-#&gt; 21 09:30:58 10997.71
-#&gt; 22 09:31:16 10997.85
-#&gt; 23 09:31:16 10997.85
-#&gt; 24 09:31:16 10997.86
-#&gt; 25 09:31:59 10997.90
-#&gt; 26 09:31:59 10997.93
-#&gt; 27 09:33:57 10987.91
-#&gt; 28 09:34:35 10987.85
-#&gt; 29 09:35:32 10987.85
-#&gt; 30 09:35:32 10987.85</div><div class='input'><span class='fu'>intradays</span><span class='op'>(</span><span class='st'>"Wafa Assur"</span>, <span class='st'>"Nexans Maroc"</span><span class='op'>)</span>
+#&gt; 1  09:30:01 10977.87
+#&gt; 2  09:30:07 10969.18
+#&gt; 3  09:30:09 10971.02
+#&gt; 4  09:30:17 10972.07
+#&gt; 5  09:30:27 10972.07
+#&gt; 6  09:30:27 10972.54
+#&gt; 7  09:30:34 10971.84
+#&gt; 8  09:30:42 10971.70
+#&gt; 9  09:30:44 10972.79
+#&gt; 10 09:30:47 10972.79
+#&gt; 11 09:30:54 10972.99
+#&gt; 12 09:30:57 10972.77
+#&gt; 13 09:30:58 10972.77
+#&gt; 14 09:31:06 10972.55
+#&gt; 15 09:31:35 10973.02
+#&gt; 16 09:32:32 10973.69
+#&gt; 17 09:40:11 10973.84
+#&gt; 18 09:40:11 10973.83
+#&gt; 19 09:42:42 10973.83
+#&gt; 20 09:42:42 10973.83
+#&gt; 21 09:43:38 10973.89
+#&gt; 22 09:47:32 10973.94
+#&gt; 23 09:49:13 10974.64
+#&gt; 24 09:50:11 10974.65
+#&gt; 25 09:50:16 10974.56
+#&gt; 26 09:53:42 10974.76
+#&gt; 27 09:54:44 10975.33
+#&gt; 28 09:57:42 10975.35
+#&gt; 29 09:57:46 10975.35
+#&gt; 30 09:57:46 10975.35</div><div class='input'><span class='fu'>intradays</span><span class='op'>(</span><span class='st'>"Wafa Assur"</span>, <span class='st'>"Nexans Maroc"</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;       time   price       symbol
-#&gt; 1 14:30:31  130.00 Nexans Maroc
-#&gt; 2 15:30:52 3551.00   Wafa Assur</div></pre>
+#&gt; 1     NULL    NULL Nexans Maroc
+#&gt; 2 13:17:11 3622.00   Wafa Assur
+#&gt; 3 13:17:24 3690.00   Wafa Assur
+#&gt; 4 13:17:24 3690.00   Wafa Assur
+#&gt; 5 13:17:24 3690.00   Wafa Assur
+#&gt; 6 13:17:24 3690.00   Wafa Assur</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

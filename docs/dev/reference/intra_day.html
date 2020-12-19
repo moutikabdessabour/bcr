@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • bcr</title>
+<title>Intraday Prices — intraday • bcr</title>
 
 
 <!-- jquery -->
@@ -41,10 +41,11 @@
   <link href="../extra.css" rel="stylesheet">
   
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Intraday Prices — intraday" />
+<meta property="og:description" content="Scraps the intraday stock prices for the provided companies" />
 
 
-
+<meta name="robots" content="noindex">
 
 <!-- mathjax -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
@@ -70,7 +71,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -83,7 +84,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">bcr</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.2</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.1.1.9000</span>
       </span>
     </div>
 
@@ -126,122 +127,79 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Intraday Prices</h1>
+    <small class="dont-index">Source: <a href='https://github.com/moutikabdessabour/bcr/blob/master/R/intra_day.R'><code>R/intra_day.R</code></a></small>
+    <div class="hidden name"><code>intra_day.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    <p>Scraps the intraday stock prices for the provided companies</p>
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
+    <pre class="usage"><span class='fu'>intraday</span><span class='op'>(</span><span class='va'>name</span><span class='op'>)</span>
 
-    <tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="get_today.html">get_today()</a></code> </p>
-        </td>
-        <td><p>Latest daily variation of Moroccan stocks</p></td>
-      </tr>
-    </tbody><tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-intra-day-price-variation" class="hasAnchor"><a href="#section-intra-day-price-variation" class="anchor"></a>Intra-day price variation</h2>
-          <p class="section-desc"><p>Easy access to the price changes that occured for the provided company stock or Market Indices (<strong>MASI</strong> and <strong>MADEX</strong>).</p></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="intra_day.html">intraday()</a></code> <code><a href="intra_day.html">intradays()</a></code> </p>
-        </td>
-        <td><p>Intraday Prices</p></td>
-      </tr>
-    </tbody><tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-historical-stock-prices" class="hasAnchor"><a href="#section-historical-stock-prices" class="anchor"></a>Historical stock prices</h2>
-          <p class="section-desc"><p>Provides historical price data for the provided companies or Market Indices (<strong>MASI</strong> and <strong>MADEX</strong>).</p></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="stock.html">stock()</a></code> <code><a href="stock.html">stocks()</a></code> </p>
-        </td>
-        <td><p>Stock prices</p></td>
-      </tr>
-    </tbody><tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-moroccan-market-indices" class="hasAnchor"><a href="#section-moroccan-market-indices" class="anchor"></a>Moroccan Market Indices</h2>
-          <p class="section-desc"><p>Easy access to the full list of Moroccan Market and Sectoral Indices.</p></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="indices.html">indices()</a></code> <code><a href="indices.html">sectoral_indices()</a></code> </p>
-        </td>
-        <td><p>Moroccan Market and Sectoral indices</p></td>
-      </tr>
-    </tbody><tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-moroccan-bonds" class="hasAnchor"><a href="#section-moroccan-bonds" class="anchor"></a>Moroccan Bonds</h2>
-          <p class="section-desc"><p>Comprehensive list of the available Moroccan Bonds.</p></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="bonds.html">bonds()</a></code> </p>
-        </td>
-        <td><p>Moroccan Bonds</p></td>
-      </tr>
-    </tbody><tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-important-notes-" class="hasAnchor"><a href="#section-important-notes-" class="anchor"></a>Important Notes:</h2>
-          <p class="section-desc"><ul>
-<li>The plural variations of the functions accept multiple arguments.</li>
-<li>The names of the companies should be provided like they’re listed in the <a href="get_today.html"><code>get_today</code></a> output.</li>
-<li>for <a href="stock.html"><code>stock</code></a> and <a href="get_today.html"><code>intraday</code></a> providing no argument defaults to using <strong>MASI</strong> as one.</li>
-</ul></p>
-        </th>
-      </tr>
-      
-      
-    </tbody>
+<span class='fu'>intradays</span><span class='op'>(</span><span class='va'>...</span><span class='op'>)</span></pre>
+
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>name, ...</th>
+      <td><p>Company names as returned by the <code><a href='get_today.html'>get_today()</a></code> function</p></td>
+    </tr>
     </table>
-  </div>
 
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>Returns a <code>data.frame</code> containing all the intraday prices for the specified stocks.</p><ul>
+<li><p><code>time</code>: the time of the record.</p></li>
+<li><p><code>price</code>: the price at that time.
+Where the <code>symbol</code> column contains the name of the company.</p></li>
+</ul>
+
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='fu'>intraday</span><span class='op'>(</span><span class='op'>)</span>, <span class='fl'>30</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;        time    price
+#&gt; 1  09:30:03 11551.26
+#&gt; 2  09:30:03 11551.41
+#&gt; 3  09:30:07 11551.56
+#&gt; 4  09:30:17 11551.75
+#&gt; 5  09:30:17 11554.02
+#&gt; 6  09:30:20 11554.13
+#&gt; 7  09:30:22 11559.45
+#&gt; 8  09:30:28 11558.82
+#&gt; 9  09:30:30 11561.09
+#&gt; 10 09:30:41 11561.10
+#&gt; 11 09:30:41 11561.06
+#&gt; 12 09:30:48 11561.29
+#&gt; 13 09:30:48 11561.49
+#&gt; 14 09:30:49 11566.50
+#&gt; 15 09:30:51 11566.83
+#&gt; 16 09:30:53 11566.84
+#&gt; 17 09:30:53 11555.87
+#&gt; 18 09:30:54 11562.64
+#&gt; 19 09:30:56 11562.77
+#&gt; 20 09:30:57 11562.81
+#&gt; 21 09:30:57 11575.89
+#&gt; 22 09:31:40 11579.22
+#&gt; 23 09:32:00 11579.49
+#&gt; 24 09:32:11 11579.59
+#&gt; 25 09:32:13 11579.47
+#&gt; 26 09:32:27 11579.83
+#&gt; 27 09:32:30 11579.75
+#&gt; 28 09:32:50 11579.68
+#&gt; 29 09:34:03 11579.00
+#&gt; 30 09:34:06 11579.12</div><div class='input'><span class='fu'>intradays</span><span class='op'>(</span><span class='st'>"Wafa Assur"</span>, <span class='st'>"Nexans Maroc"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;       time   price       symbol
+#&gt; 1 14:30:30  134.95 Nexans Maroc
+#&gt; 2 12:21:21 3995.00   Wafa Assur
+#&gt; 3 12:21:21 4000.00   Wafa Assur
+#&gt; 4 12:21:21 4050.00   Wafa Assur
+#&gt; 5 15:30:00 3910.00   Wafa Assur</div></pre>
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>

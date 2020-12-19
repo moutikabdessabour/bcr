@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • bcr</title>
+<title>Changelog • bcr</title>
 
 
 <!-- jquery -->
@@ -41,10 +41,10 @@
   <link href="../extra.css" rel="stylesheet">
   
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Changelog" />
 
 
-
+<meta name="robots" content="noindex">
 
 <!-- mathjax -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
@@ -70,7 +70,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-reference-index">
+    <div class="container template-news">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -83,7 +83,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">bcr</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.2</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.1.1.9000</span>
       </span>
     </div>
 
@@ -126,120 +126,47 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+      <h1 data-toc-skip>Changelog <small></small></h1>
+      <small>Source: <a href='https://github.com/moutikabdessabour/bcr/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
     </div>
 
-    <table class="ref-index">
-
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
-
-    <tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="get_today.html">get_today()</a></code> </p>
-        </td>
-        <td><p>Latest daily variation of Moroccan stocks</p></td>
-      </tr>
-    </tbody><tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-intra-day-price-variation" class="hasAnchor"><a href="#section-intra-day-price-variation" class="anchor"></a>Intra-day price variation</h2>
-          <p class="section-desc"><p>Easy access to the price changes that occured for the provided company stock or Market Indices (<strong>MASI</strong> and <strong>MADEX</strong>).</p></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="intra_day.html">intraday()</a></code> <code><a href="intra_day.html">intradays()</a></code> </p>
-        </td>
-        <td><p>Intraday Prices</p></td>
-      </tr>
-    </tbody><tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-historical-stock-prices" class="hasAnchor"><a href="#section-historical-stock-prices" class="anchor"></a>Historical stock prices</h2>
-          <p class="section-desc"><p>Provides historical price data for the provided companies or Market Indices (<strong>MASI</strong> and <strong>MADEX</strong>).</p></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="stock.html">stock()</a></code> <code><a href="stock.html">stocks()</a></code> </p>
-        </td>
-        <td><p>Stock prices</p></td>
-      </tr>
-    </tbody><tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-moroccan-market-indices" class="hasAnchor"><a href="#section-moroccan-market-indices" class="anchor"></a>Moroccan Market Indices</h2>
-          <p class="section-desc"><p>Easy access to the full list of Moroccan Market and Sectoral Indices.</p></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="indices.html">indices()</a></code> <code><a href="indices.html">sectoral_indices()</a></code> </p>
-        </td>
-        <td><p>Moroccan Market and Sectoral indices</p></td>
-      </tr>
-    </tbody><tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-moroccan-bonds" class="hasAnchor"><a href="#section-moroccan-bonds" class="anchor"></a>Moroccan Bonds</h2>
-          <p class="section-desc"><p>Comprehensive list of the available Moroccan Bonds.</p></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="bonds.html">bonds()</a></code> </p>
-        </td>
-        <td><p>Moroccan Bonds</p></td>
-      </tr>
-    </tbody><tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-important-notes-" class="hasAnchor"><a href="#section-important-notes-" class="anchor"></a>Important Notes:</h2>
-          <p class="section-desc"><ul>
-<li>The plural variations of the functions accept multiple arguments.</li>
-<li>The names of the companies should be provided like they’re listed in the <a href="get_today.html"><code>get_today</code></a> output.</li>
-<li>for <a href="stock.html"><code>stock</code></a> and <a href="get_today.html"><code>intraday</code></a> providing no argument defaults to using <strong>MASI</strong> as one.</li>
-</ul></p>
-        </th>
-      </tr>
-      
-      
-    </tbody>
-    </table>
+    <div id="bcr-v0-1-2" class="section level1">
+<h1 class="page-header" data-toc-text="0.1.2">
+<a href="#bcr-v0-1-2" class="anchor"></a>bcr v0.1.2<small> Unreleased </small>
+</h1>
+<ul>
+<li>Solved Empty API result issue.</li>
+</ul>
+</div>
+    <div id="bcr-v0-1-1" class="section level1">
+<h1 class="page-header" data-toc-text="0.1.1">
+<a href="#bcr-v0-1-1" class="anchor"></a>bcr v0.1.1<small> 2020-12-05 </small>
+</h1>
+<ul>
+<li>Moved <code>sector_indices()</code> to <code><a href="../reference/indices.html">sectoral_indices()</a></code>.</li>
+<li>Fixed minor bugs.</li>
+</ul>
+</div>
+    <div id="bcr-v0-1-0" class="section level1">
+<h1 class="page-header" data-toc-text="0.1.0">
+<a href="#bcr-v0-1-0" class="anchor"></a>bcr v0.1.0<small> 2020-11-23 </small>
+</h1>
+<ul>
+<li>Initial release</li>
+<li>
+<code><a href="../reference/indices.html">indices()</a></code>, <code>sector_indices()</code> functions to get Moroccan market indices and Sector indices</li>
+<li>
+<code><a href="../reference/get_today.html">get_today()</a></code> Functions to get the current variation of the stocks.</li>
+<li>
+<code><a href="../reference/intraday.html">intraday()</a></code>, <code>intadays()</code> Functions to get the intraday variation of the stocks, MASI and MADEX indices.</li>
+<li>
+<code><a href="../reference/bonds.html">bonds()</a></code> Function to list the available bonds.</li>
+<li>
+<code><a href="../reference/stock.html">stock()</a></code>, <code><a href="../reference/stock.html">stocks()</a></code> to list the historical price data of the provided stocks, can be also used to get the historical prices of the MASI, MADEX Indices.</li>
+</ul>
+</div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -247,6 +174,7 @@
       <h2 data-toc-skip>Contents</h2>
     </nav>
   </div>
+
 </div>
 
 

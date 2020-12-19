@@ -7,9 +7,8 @@
 
 [![CRAN
 status](https://www.r-pkg.org/badges/version/bcr)](https://cran.r-project.org/package=bcr)
-[![](https://img.shields.io/badge/dev%20-0.1.2-brightgreen.svg)](https://github.com/moutikabdessabour/bcr)
-[![CRAN
-checks](https://cranchecks.info/badges/worst/bcr)](https://cran.r-project.org/web/checks/check_results_bcr.html)
+[![](https://img.shields.io/badge/dev%20-0.1.1.9000-brightgreen.svg)](https://github.com/moutikabdessabour/bcr)
+<!-- [![CRAN checks](https://cranchecks.info/badges/worst/bcr)](https://cran.r-project.org/web/checks/check_results_bcr.html) -->
 [![Lifecycle:
 maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 [![CRAN RStudio mirror
@@ -31,7 +30,7 @@ Data provided by this package:
 
 ## Installation
 
-Either install directly from CRAN :
+Either install directly from [CRAN](https://cran.r-project.org) :
 
 ``` r
 # From the R console call
@@ -50,5 +49,5 @@ remotes::install_github("moutikabdessabour/bcr")
 
 ## Documentation
 
-A minimal documentation is provided
+All you need to know about how to use thi package is provided
 [here](https://moutikabdessabour.github.io/bcr/reference/index.html).

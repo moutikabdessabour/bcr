@@ -45,7 +45,7 @@
 <meta property="og:description" content="Get the last variation of all stocks that are available in the stock exchange and the MASI/MADEX indices." />
 
 
-
+<meta name="robots" content="noindex">
 
 <!-- mathjax -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
@@ -84,7 +84,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">bcr</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.2</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.1.1.9000</span>
       </span>
     </div>
 
@@ -153,80 +153,81 @@
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'>get_today</span><span class='op'>(</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;                   name   price variation
-#&gt; 1               Addoha    6.20      0.00
-#&gt; 2                 AFMA 1039.00      0.00
-#&gt; 3         Afric Indus.    0.00      0.00
-#&gt; 4         Afriquia Gaz 3920.00      0.00
-#&gt; 5                 Agma 3364.00      0.00
-#&gt; 6            Alliances   37.49      0.00
-#&gt; 7      Aluminium Maroc 1299.00      0.00
-#&gt; 8         ATLANTASANAD   81.25      0.00
-#&gt; 9   Attijariwafa Bk Rg  412.00      0.00
-#&gt; 11           Auto Hall   70.75      0.00
-#&gt; 12          Auto Nejma 1978.00      0.00
-#&gt; 13              BALIMA   96.45      0.00
-#&gt; 14              BoA Br  151.50      0.00
-#&gt; 15                 BCP  245.00      0.00
-#&gt; 17                BMCI  623.00      0.00
-#&gt; 18       Cartier Saada   28.00      0.00
-#&gt; 19                 CDM  443.10      0.02
-#&gt; 20      Central.Danone  523.90      0.00
-#&gt; 21                 CIH    0.00      0.00
-#&gt; 22       Ciments Maroc 1555.00      0.00
-#&gt; 23                 CMT 1490.00      0.00
-#&gt; 24            Colorado   48.50      0.00
-#&gt; 25             COSUMAR  210.00      0.00
-#&gt; 26                 CTM  683.10      0.00
-#&gt; 27       Dari Couspate 4700.00      0.00
-#&gt; 28       Delattre Lev.   32.18      0.00
-#&gt; 29       Delta Holding   31.95      0.00
-#&gt; 30          Diac Salaf   26.25      0.00
-#&gt; 31              DISWAY  440.95      0.00
-#&gt; 32              Ennakl   25.40      0.00
-#&gt; 33               EQDOM 1123.00      0.00
-#&gt; 34     FENIE BROSSETTE   41.49      0.00
-#&gt; 35                 HPS 5800.00      0.00
-#&gt; 36         IBMaroc.com    0.00      0.00
-#&gt; 37      Immr Invest Br   94.46      0.00
-#&gt; 38             INVOLYS  119.40      0.00
-#&gt; 39     Jet Contractors  184.00      0.00
-#&gt; 40           LABEL VIE 3200.00      0.00
-#&gt; 41 LafargeHolcim Ma Br    0.00      0.00
-#&gt; 42     Lesieur Cristal  157.15      0.00
-#&gt; 43               Lydec  365.00      0.00
-#&gt; 44           M2M Group    0.00      0.00
-#&gt; 45     Maghreb Oxygene  186.30      0.00
-#&gt; 46          Maghrebail  873.00      0.00
-#&gt; 47             Managem 1070.00      0.00
-#&gt; 48       Maroc Leasing  479.90      0.00
-#&gt; 49       Maroc Telecom  143.65      0.00
-#&gt; 50           Med Paper   14.30      0.00
-#&gt; 51           Microdata  574.50      0.00
-#&gt; 52         Mutandis Br  225.00      0.00
-#&gt; 53        Nexans Maroc  130.00      0.00
-#&gt; 54              Oulmes 1297.00      0.00
-#&gt; 55          PROMOPHARM    0.00      0.00
-#&gt; 56       Rebab Company    0.00      0.00
-#&gt; 57    Res.Dar Saada Br   25.35      0.00
-#&gt; 58               Risma  105.90      0.86
-#&gt; 59                 S2M    0.00      0.00
-#&gt; 60     Saham Assurance    0.00      0.00
-#&gt; 61             SALAFIN  530.00      0.00
-#&gt; 62               SAMIR  133.50      0.00
-#&gt; 63                 SMI 1880.00      0.00
-#&gt; 64   Stokvis Nord Afr.   10.85      0.00
-#&gt; 65                SNEP  434.00      0.00
-#&gt; 66             Sonasid  273.00      0.00
-#&gt; 67             SOTHEMA 1742.00      1.99
-#&gt; 68                 SRM  142.00     -0.25
-#&gt; 69        Ste Boissons 2300.00      0.00
-#&gt; 70        STROC Indus.   21.07      0.00
-#&gt; 71        TAQA Morocco  936.00      0.00
-#&gt; 72               Timar  127.45      0.00
-#&gt; 73         Total Maroc 1058.00      0.00
-#&gt; 74              Unimer  164.00      0.00
-#&gt; 75          Wafa Assur 3690.00      0.00
-#&gt; 76            Zellidja   74.61     -2.00</div></pre>
+#&gt; 1               Addoha    6.70     -0.15
+#&gt; 2                 AFMA 1110.00      3.54
+#&gt; 3         Afric Indus.  277.00      0.00
+#&gt; 4         Afriquia Gaz 4000.00     -2.44
+#&gt; 5                 Agma 3711.00      0.03
+#&gt; 6            Alliances   37.31     -1.82
+#&gt; 7      Aluminium Maroc 1325.00      0.00
+#&gt; 8    Aradei Capital Br  405.00      0.25
+#&gt; 9         ATLANTASANAD   82.90     -0.12
+#&gt; 10  Attijariwafa Bk Rg  437.00     -0.67
+#&gt; 12           Auto Hall   70.20      1.92
+#&gt; 13          Auto Nejma 1985.00      0.00
+#&gt; 14              BALIMA   96.45      0.00
+#&gt; 15              BoA Br  158.90      2.15
+#&gt; 16                 BCP  254.60     -1.70
+#&gt; 18                BMCI  645.00      0.00
+#&gt; 19       Cartier Saada   29.15      0.00
+#&gt; 20                 CDM  465.00      0.22
+#&gt; 21      Central.Danone  513.00     -1.91
+#&gt; 22                 CIH  270.00      1.89
+#&gt; 23       Ciments Maroc 1655.00      1.41
+#&gt; 24                 CMT 1530.00     -0.65
+#&gt; 25            Colorado   48.50      1.57
+#&gt; 26             COSUMAR  221.00     -3.07
+#&gt; 27                 CTM  703.00      0.43
+#&gt; 28       Dari Couspate 4700.00      0.00
+#&gt; 29       Delattre Lev.   35.50     -3.66
+#&gt; 30       Delta Holding   31.80      0.00
+#&gt; 31          Diac Salaf   26.25      0.00
+#&gt; 32              DISWAY  437.00     -0.68
+#&gt; 33              Ennakl   27.00     -2.88
+#&gt; 34               EQDOM 1120.00     -0.27
+#&gt; 35     FENIE BROSSETTE   41.61      0.00
+#&gt; 36                 HPS 6595.00     -0.08
+#&gt; 37         IBMaroc.com   28.00     -2.91
+#&gt; 38      Immr Invest Br   96.37     -0.07
+#&gt; 39             INVOLYS  121.45      0.00
+#&gt; 40     Jet Contractors  189.00     -0.47
+#&gt; 41           LABEL VIE 3290.00      2.17
+#&gt; 42 LafargeHolcim Ma Br 1650.00      0.61
+#&gt; 43     Lesieur Cristal  164.35      0.00
+#&gt; 44               Lydec  370.00      1.66
+#&gt; 45           M2M Group  678.00      0.00
+#&gt; 46     Maghreb Oxygene  187.00      0.38
+#&gt; 47          Maghrebail  873.00      0.00
+#&gt; 48             Managem 1140.00     -3.14
+#&gt; 49       Maroc Leasing  470.35     -1.99
+#&gt; 50       Maroc Telecom  147.00      0.17
+#&gt; 51           Med Paper   14.32     -1.85
+#&gt; 52           Microdata  596.00      3.47
+#&gt; 53         Mutandis Br  221.90      1.32
+#&gt; 54        Nexans Maroc  134.95      0.00
+#&gt; 55              Oulmes 1242.00     -1.90
+#&gt; 56          PROMOPHARM  705.00      0.00
+#&gt; 57       Rebab Company  109.95      0.00
+#&gt; 58    Res.Dar Saada Br   26.71     -1.91
+#&gt; 59               Risma  115.70     -1.11
+#&gt; 60                 S2M  166.00      3.69
+#&gt; 61     Saham Assurance 1240.00      0.81
+#&gt; 62             SALAFIN  531.00      1.72
+#&gt; 63               SAMIR  133.50      0.00
+#&gt; 64                 SMI 1991.00      2.00
+#&gt; 65   Stokvis Nord Afr.   10.83     -0.64
+#&gt; 66                SNEP  462.00     -0.75
+#&gt; 67             Sonasid  290.50     -2.19
+#&gt; 68             SOTHEMA 1937.00      0.00
+#&gt; 69                 SRM  135.00     -0.92
+#&gt; 70        Ste Boissons 2400.00     -0.25
+#&gt; 71        STROC Indus.   20.90      0.00
+#&gt; 72        TAQA Morocco  930.00      0.00
+#&gt; 73               Timar  127.45      0.00
+#&gt; 74         Total Maroc 1218.00     -3.94
+#&gt; 75              Unimer  161.00      0.00
+#&gt; 76          Wafa Assur 3910.00     -2.25
+#&gt; 77            Zellidja   73.12      0.00</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
