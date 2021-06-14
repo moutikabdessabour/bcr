@@ -18,5 +18,7 @@ Returns a \code{data.frame} containing the daily variation for all the stocks.
 Get the last variation of all stocks that are available in the stock exchange and the MASI/MADEX indices.
 }
 \examples{
+if( bcr:::check_internet() ) {
 get_today()
+}
 }

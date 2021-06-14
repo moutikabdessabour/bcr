@@ -34,6 +34,10 @@ the \code{sectoral_indices()} function returns a \code{data.frame} with the foll
 Gets the Moroccan Market indices (\code{indices()}) or Sectoral indices (\code{sectoral_indices()}) that are listed in \href{http://leboursier.ma/details/marche.html}{\strong{Le Boursier}}.
 }
 \examples{
+if( bcr:::check_internet() ) {
 indices()
+}
+if( bcr:::check_internet() ) {
 sectoral_indices()
+}
 }

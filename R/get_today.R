@@ -1,5 +1,5 @@
 #' Latest daily variation of Moroccan stocks
-#' @description 
+#' @description
 #' Get the last variation of all stocks that are available in the stock exchange and the MASI/MADEX indices.
 #' @return
 #' Returns a `data.frame` containing the daily variation for all the stocks.
@@ -10,10 +10,12 @@
 #' @export
 #'
 #' @examples
+#' if( bcr:::check_internet() ) {
 #' get_today()
+#' }
 get_today <- function(){
     get_html("http://leboursier.ma/component/option,com_api/format,json/method,getBasicStocksInfo/") -> df
     df$name = sub(" P?/?N?$", "", df$name)
-   
+
     setNames(df[nzchar(df$name), - 2], nm=c("name", "price", "variation"))
 }

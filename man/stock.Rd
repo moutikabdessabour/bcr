@@ -29,8 +29,12 @@ If the plural variant is used it'll add a \code{symbol} column that'll contain t
 Scraps \href{http://leboursier.ma/}{\strong{Le Boursier}}'s and gets the historical prices for the specified companies.
 }
 \examples{
+if( bcr:::check_internet() ) {
 head(stock("Wafa Assur"), 20)
 head(stock(), 20) # same as runing stock("MASI")
 head(stock("MADEX"), 20)
+}
+if( bcr:::check_internet() ) {
 head(stocks("Masi", "MADEX"), 20)
+}
 }

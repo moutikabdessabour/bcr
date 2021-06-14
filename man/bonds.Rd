@@ -22,5 +22,7 @@ Returns a \code{data.frame} containing :
 Scraps all the bonds listed in \href{http://leboursier.ma/details/marche.html}{\strong{Le Boursier}}.
 }
 \examples{
+if( bcr:::check_internet() ) {
 bonds()
+}
 }

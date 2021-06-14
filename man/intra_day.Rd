@@ -24,6 +24,10 @@ Where the \code{symbol} column contains the name of the company.
 Scraps the intraday stock prices for the provided companies
 }
 \examples{
+if( bcr:::check_internet() ) {
 head(intraday(), 30)
+}
+if( bcr:::check_internet() ) {
 intradays("Wafa Assur", "Nexans Maroc")
+}
 }

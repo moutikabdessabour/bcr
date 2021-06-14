@@ -165,55 +165,59 @@
 
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>indices</span><span class='op'>(</span><span class='op'>)</span>
+    <pre class="examples"><div class='input'><span class='kw'>if</span><span class='op'>(</span> <span class='fu'>bcr</span><span class='fu'>:::</span><span class='fu'>check_internet</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>)</span> <span class='op'>{</span>
+<span class='fu'>indices</span><span class='op'>(</span><span class='op'>)</span>
+<span class='op'>}</span>
 </div><div class='output co'>#&gt;                   type                name          last_date    price     open    close variation      low     high
-#&gt; 1             ST Index         INDICE MASI 07/12/2020 à 16:00 11011.15 10977.68     0.00    -100.0 10969.18 11015.57
-#&gt; 2             ST Index        INDICE MADEX 07/12/2020 à 16:00  8964.08  8936.66     0.00    -100.0  8929.55  8968.25
-#&gt; 3             ST Index   Casablanca ESG 10 07/12/2020 à 16:00   841.86   841.79     0.00    -100.0   841.07   844.50
-#&gt; 4    Rentability Index  IND MASI RENT.BRUT 07/12/2020 à 16:00 30976.66 30882.49     0.00    -100.0 30858.59 30989.10
-#&gt; 5    Rentability Index IND MASI RENTAB NET 07/12/2020 à 16:00 27561.21 27477.43     0.00    -100.0 27456.16 27572.28
-#&gt; 6    Rentability Index IND MADEX RENT BRUT 07/12/2020 à 16:00 23892.17 23819.07     0.00    -100.0 23800.12 23903.28
-#&gt; 7    Rentability Index  IND MADEX RENT NET 07/12/2020 à 16:00 21370.68 21305.30     0.00    -100.0 21288.35 21380.62
-#&gt; 8       Currency Index     INDICE MASI USD 07/12/2020 à 16:00  9970.25  9971.07     0.00    -100.0  9960.71 10005.35
-#&gt; 9       Currency Index   INDICE MASI EUROS 07/12/2020 à 16:00 10400.19 10349.78     0.00    -100.0 10341.77 10404.37
-#&gt; 10      Currency Index    INDICE MADEX USD 07/12/2020 à 16:00  8116.70  8117.20     0.00    -100.0  8108.71  8145.90
-#&gt; 11      Currency Index   INDICE MADEX EURO 07/12/2020 à 16:00  8466.71  8425.50     0.00    -100.0  8418.80  8470.20
-#&gt; 12 Moroccan bond index       MOROCCAN BI G 04/12/2020 à 18:33   257.71     0.00   257.71       0.0     0.00     0.00
-#&gt; 13 Moroccan bond index      MOROCCAN BI CT 04/12/2020 à 18:33   180.57     0.00   180.57       0.0     0.00     0.00
-#&gt; 14 Moroccan bond index      MOROCCAN BI MT 04/12/2020 à 18:33   222.43     0.00   222.43       0.0     0.00     0.00
-#&gt; 15 Moroccan bond index     MOROCCAN BI MLT 04/12/2020 à 18:33   294.17     0.00   294.17       0.0     0.00     0.00
-#&gt; 16 Moroccan bond index      MOROCCAN BI LT 04/12/2020 à 18:33   404.16     0.00   404.16       0.0     0.00     0.00
-#&gt; 17            CFG bond              CFG25F 07/12/2020 à 18:33  3488.65     0.00  3478.21       0.3     0.00     0.00
-#&gt; 18            CFG bond Morocco CFG25 Index 07/12/2020 à 18:33 22765.90     0.00 22720.10       0.2     0.00     0.00
-#&gt; 19            CFG bond        CFG BOND MCT 25/09/2020 à 18:33   303.87     0.00   303.87       0.0     0.00     0.00
-#&gt; 20            CFG bond        CFG BOND OCT 25/09/2020 à 18:33   445.11     0.00   445.11       0.0     0.00     0.00
-#&gt; 21            CFG bond        CFG BOND OLT 25/09/2020 à 18:33   792.70     0.00   792.70       0.0     0.00     0.00
-#&gt; 22            CFG bond        CFG BOND OMT 25/09/2020 à 18:33   582.68     0.00   582.68       0.0     0.00     0.00
-#&gt; 23            CFG bond        CFG BOND OBL 25/09/2020 à 18:33   568.54     0.00   568.54       0.0     0.00     0.00</div><div class='input'><span class='fu'>sectoral_indices</span><span class='op'>(</span><span class='op'>)</span>
+#&gt; 1             ST Index         INDICE MASI 14/06/2021 à 14:12 12544.60 12462.80 12462.80      0.66 12462.80 12544.60
+#&gt; 2             ST Index        INDICE MADEX 14/06/2021 à 14:12 10202.18 10133.58 10133.58      0.68 10133.58 10202.18
+#&gt; 3             ST Index   Casablanca ESG 10 14/06/2021 à 13:59   937.40   930.65   930.65      0.73   930.65   937.40
+#&gt; 4    Rentability Index  IND MASI RENT.BRUT 14/06/2021 à 08:03 35446.04 35446.04 35446.04      0.00 35446.04 35446.04
+#&gt; 5    Rentability Index IND MASI RENTAB NET 14/06/2021 à 08:03 31486.15 31486.15 31486.15      0.00 31486.15 31486.15
+#&gt; 6    Rentability Index IND MADEX RENT BRUT 14/06/2021 à 08:03 27314.98 27314.98 27314.98      0.00 27314.98 27314.98
+#&gt; 7    Rentability Index  IND MADEX RENT NET 14/06/2021 à 08:03 24391.08 24391.08 24391.08      0.00 24391.08 24391.08
+#&gt; 8       Currency Index     INDICE MASI USD 14/06/2021 à 08:03 11491.89 11491.89 11491.89      0.00 11491.89 11491.89
+#&gt; 9       Currency Index   INDICE MASI EUROS 14/06/2021 à 08:03 11955.76 11955.76 11955.76      0.00 11955.76 11955.76
+#&gt; 10      Currency Index    INDICE MADEX USD 14/06/2021 à 08:03  9344.13  9344.13  9344.13      0.00  9344.13  9344.13
+#&gt; 11      Currency Index   INDICE MADEX EURO 14/06/2021 à 08:03  9721.30  9721.30  9721.30      0.00  9721.30  9721.30
+#&gt; 12 Moroccan bond index       MOROCCAN BI G 12/05/2021 à 16:58   264.76     0.00   264.76      0.00     0.00     0.00
+#&gt; 13 Moroccan bond index      MOROCCAN BI CT 19/05/2021 à 17:57   182.18     0.00   182.18      0.00     0.00     0.00
+#&gt; 14 Moroccan bond index      MOROCCAN BI MT 17/05/2021 à 18:00   227.03     0.00   227.03      0.00     0.00     0.00
+#&gt; 15 Moroccan bond index     MOROCCAN BI MLT 06/05/2021 à 16:59   304.13     0.00   304.13      0.00     0.00     0.00
+#&gt; 16 Moroccan bond index      MOROCCAN BI LT 25/05/2021 à 17:59   422.43     0.00   422.43      0.00     0.00     0.00
+#&gt; 17            CFG bond              CFG25F 01/06/2021 à 17:52  3833.25     0.00  3833.25      0.00     0.00     0.00
+#&gt; 18            CFG bond Morocco CFG25 Index 19/05/2021 à 23:07 25026.90     0.00 25026.90      0.00     0.00     0.00
+#&gt; 19            CFG bond        CFG BOND MCT 04/06/2021 à 17:53   307.70     0.00   307.70      0.00     0.00     0.00
+#&gt; 20            CFG bond        CFG BOND OCT 09/04/2021 à 09:53   450.08     0.00   450.08      0.00     0.00     0.00
+#&gt; 21            CFG bond        CFG BOND OLT 09/04/2021 à 09:53   818.86     0.00   818.86      0.00     0.00     0.00
+#&gt; 22            CFG bond        CFG BOND OMT 09/04/2021 à 19:18   593.90     0.00   593.90      0.00     0.00     0.00
+#&gt; 23            CFG bond        CFG BOND OBL 09/04/2021 à 09:53   579.49     0.00   579.49      0.00     0.00     0.00</div><div class='input'><span class='kw'>if</span><span class='op'>(</span> <span class='fu'>bcr</span><span class='fu'>:::</span><span class='fu'>check_internet</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>)</span> <span class='op'>{</span>
+<span class='fu'>sectoral_indices</span><span class='op'>(</span><span class='op'>)</span>
+<span class='op'>}</span>
 </div><div class='output co'>#&gt;                                                           name    price variation
-#&gt; 1                                   AGROALIMENTAIRE PRODUCTION 30966.30      0.00
-#&gt; 2                                                   ASSURANCES  4163.78      0.00
-#&gt; 3                                                      BANQUES 11905.86      0.00
-#&gt; 4                         BATIMENT &amp; MATERIAUX DE CONSTRUCTION 15813.02      0.00
-#&gt; 5                                                     BOISSONS 14005.27      0.00
-#&gt; 6                                                       CHIMIE  3724.53      0.00
-#&gt; 7                                                DISTRIBUTEURS 31485.70      0.00
-#&gt; 8                                                  ELECTRICITE  2091.62      0.00
-#&gt; 9                      EQUIPEMENTS ELECTRONIQUES &amp; ELECTRIQUES  3714.29      0.00
-#&gt; 10                                    INDUSTRIE PHARMACEUTIQUE  2630.30      0.00
-#&gt; 11                 INGENIERIES &amp; BIENS DEQUIPEMENT INDUSTRIELS    65.44      0.00
-#&gt; 12                                           LOISIRS ET HOTELS   479.26      0.00
-#&gt; 13               MATERIELS LOGICIELS ET SERVICES INFORMATIQUES  2285.95      0.00
-#&gt; 14                                                       MINES 20236.17      0.00
-#&gt; 15                                                  IMMOBILIER  2401.05      0.00
-#&gt; 16                                              PETROLE ET GAZ 14774.93      0.00
-#&gt; 17                                  SERVICES AUX COLLECTIVITES  1520.83      0.00
-#&gt; 18 SOCIETES DE FINANCEMENT ET AUTRES ACTIVITES     FINANCIERES  7785.50      0.00
-#&gt; 19                                                  IMMOBILIER  2401.05      0.00
-#&gt; 20                          SOCIETES DE PORTEFEUILLES-HOLDINGS  4848.89      0.00
-#&gt; 21                                       SYLVICULTURE &amp; PAPIER    19.61      0.00
-#&gt; 22                                          TELECOMMUNICATIONS  2108.35      0.00
-#&gt; 23                                                  TRANSPORTS  2364.28      0.00</div></pre>
+#&gt; 1                                   AGROALIMENTAIRE PRODUCTION 39843.71      0.00
+#&gt; 2                                                   ASSURANCES  4587.71      0.00
+#&gt; 3                                                      BANQUES 13069.48      0.00
+#&gt; 4                         BATIMENT &amp; MATERIAUX DE CONSTRUCTION 18995.15      0.00
+#&gt; 5                                                     BOISSONS 15146.23      0.00
+#&gt; 6                                                       CHIMIE  6080.90      0.00
+#&gt; 7                                                DISTRIBUTEURS 39031.72      0.00
+#&gt; 8                                                  ELECTRICITE  2324.02      0.00
+#&gt; 9                      EQUIPEMENTS ELECTRONIQUES &amp; ELECTRIQUES  4224.29      0.00
+#&gt; 10                                    INDUSTRIE PHARMACEUTIQUE  5983.38      0.00
+#&gt; 11                 INGENIERIES &amp; BIENS DEQUIPEMENT INDUSTRIELS    64.53      0.00
+#&gt; 12                                           LOISIRS ET HOTELS   527.23      0.00
+#&gt; 13               MATERIELS LOGICIELS ET SERVICES INFORMATIQUES  2678.64      0.00
+#&gt; 14                                                       MINES 25710.84      0.00
+#&gt; 15                                                  IMMOBILIER  3515.55      0.00
+#&gt; 16                                              PETROLE ET GAZ 17596.27      0.00
+#&gt; 17                                  SERVICES AUX COLLECTIVITES  1333.33      0.00
+#&gt; 18 SOCIETES DE FINANCEMENT ET AUTRES ACTIVITES     FINANCIERES  8743.15      0.00
+#&gt; 19                                                  IMMOBILIER  3515.55      0.00
+#&gt; 20                          SOCIETES DE PORTEFEUILLES-HOLDINGS  5108.14      0.00
+#&gt; 21                                       SYLVICULTURE &amp; PAPIER    20.10      0.00
+#&gt; 22                                          TELECOMMUNICATIONS  2040.84      0.00
+#&gt; 23                                                  TRANSPORTS  2469.88      0.00</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

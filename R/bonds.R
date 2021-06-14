@@ -1,9 +1,9 @@
 #' Moroccan Bonds
 #'
-#' @description 
+#' @description
 #' Scraps all the bonds listed in [**Le Boursier**](http://leboursier.ma/details/marche.html).
-#' 
-#' @return 
+#'
+#' @return
 #' Returns a `data.frame` containing :
 #' * `bond_name`: name of the bond.
 #' * `issued`: number of issued bonds.
@@ -17,9 +17,13 @@
 #'
 #' @rdname bonds
 #' @examples
+#' if( bcr:::check_internet() ) {
 #' bonds()
+#' }
 bonds <- function() {
-    setNames(get_html("http://leboursier.ma/index.php?option=com_api&view=api&method=getBondsInfo&format=json")[- c(5,9)], nm=c("bond_name", "issued", "issuer", "full_name", "rate", "price_ref", "price_last")) -> df
+    resp <- get_html("http://leboursier.ma/index.php?option=com_api&view=api&method=getBondsInfo&format=json")[- c(5,9)]
+    df   <- setNames(resp, nm=c("bond_name", "issued", "issuer", "full_name", "rate", "price_ref", "price_last"))
+
     df$rate <- df$rate/100
     df
 }

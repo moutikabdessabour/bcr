@@ -1,7 +1,7 @@
 Package: bcr
 Title: Extract Moroccan Financial Data
-Version: 0.1.1.9
-Authors@R: 
+Version: 0.1.2
+Authors@R:
     person(given = "Abdessabour",
            family = "Moutik",
            role = c("aut", "cre"),
@@ -11,10 +11,9 @@ Description: Get Moroccan Stock Prices (historical data and intraday
      See <https://www.leboursier.ma/>.
 URL: https://github.com/moutikabdessabour/bcr, https://moutikabdessabour.github.io/bcr
 BugReports: https://github.com/moutikabdessabour/bcr/issues
-License: MIT + file LICENSE
+License: GPLv3 + file LICENSE
 Encoding: UTF-8
-LazyData: true
-Imports: 
+Imports:
   httr, jsonlite
 Depends: R (>= 3.1.0)
 Roxygen: list(markdown = TRUE)

@@ -1,5 +1,5 @@
 #' Moroccan Market and Sectoral indices
-#' @description 
+#' @description
 #' Gets the Moroccan Market indices (`indices()`) or Sectoral indices (`sectoral_indices()`) that are listed in [**Le Boursier**](http://leboursier.ma/details/marche.html).
 #' @return
 #' the `indices()` function returns a `data.frame` with the following columns:
@@ -12,7 +12,7 @@
 #' * `variation` : variation of the price.
 #' * `low` : lowest price of the index.
 #' * `high` : highest price of the index
-#' 
+#'
 #' the `sectoral_indices()` function returns a `data.frame` with the following columns:
 #' * `name` : name of the sector.
 #' * `price` : latest price of the index.
@@ -20,7 +20,9 @@
 #' @export
 #' @rdname indices
 #' @examples
+#' if( bcr:::check_internet() ) {
 #' indices()
+#' }
 indices <- function() setNames(do.call(rbind, lapply(1:5, function(x) cbind(type=index_types[x], get_html(paste0("http://leboursier.ma/index.php?option=com_api&view=api&method=indexInfoByType&format=json&type=", x))))), nm=c("type", "name", "last_date", "price", "open", "close", "variation", "low", "high"))
 
 
@@ -30,5 +32,7 @@ indices <- function() setNames(do.call(rbind, lapply(1:5, function(x) cbind(type
 #' @export
 #' @rdname indices
 #' @examples
+#' if( bcr:::check_internet() ) {
 #' sectoral_indices()
+#' }
 sectoral_indices <- function() setNames(get_html("http://leboursier.ma/index.php?option=com_api&view=api&method=sectorsInfo&format=json"),nm=c("name", "price", "variation"))
